@@ -1,0 +1,388 @@
+@font-face {
+    font-family: 'badaboom_bbregular';
+    src: url('../fonts/badaboombb_reg-webfont.eot');
+    src: url('../fonts/badaboombb_reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/badaboombb_reg-webfont.woff2') format('woff2'),
+         url('../fonts/badaboombb_reg-webfont.woff') format('woff'),
+         url('../fonts/badaboombb_reg-webfont.ttf') format('truetype'),
+         url('../fonts/badaboombb_reg-webfont.svg#badaboom_bbregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat; 
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Title block */
+section h1 {
+  font-family: "Source Sans Pro",sans-serif;
+  font-size: 1.7em;
+  background-color: #000;
+  color: #FFF;
+  margin: 0px;
+  display: inline-block;
+  padding: 0.6em 1.6em;
+}
+section > h1 b {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+
+/*  */
+a.nav-link {
+  background-color: #000;
+  color: #ee1d25;
+  padding: 0.8em 1.8em;
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.5em;
+  box-shadow: 5px 4px 0px;
+  width: auto;
+  font-size: 0.9em;
+}
+a.nav-link span {
+  margin-left: 1em;
+}
+
+
+/* Top menu */
+nav.top-menu {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 0;
+}
+
+
+/* new products */
+.featured {
+  height: 34em;
+  margin-top: 14em;
+  position: relative;
+  overflow: hidden;
+  padding: 0px;
+  background: transparent;idden;
+  padding: 0;
+}
+.featured div {
+  position: absolute;
+  background-color: #fff;
+  padding: 3.5em 0; 
+}
+.featured div a {
+  width: 15em;
+  height: 100%;
+  float: left;
+}
+.featured div a figure {
+  width: 100%;
+  height: 20em;
+  display: block;
+  overflow: hidden;
+}
+.featured div a figure img {
+  width: 100%;
+  margin-bottom: -1rem;
+}
+.featured div a h1 {
+  font-size: 1em;
+  margin: 0;
+  color: #000;
+  font-family: "Source Sans Pro",sans-serif;
+  text-transform: uppercase;
+}
+.featured > h1 {
+  padding: 0.6em 3.6em;
+}
+.featured a.nav-link {
+  bottom: auto;
+  top: 2.7em;
+  z-index: 100;
+  box-shadow: 5px -4px 0px;
+  color: #F8F62A;
+  right: 5em;
+}
+
+
+/* opening times */
+.openingTime {
+  background-image: url(../img/openingsbar.jpg);
+  background-repeat: repeat-y; 
+  min-height: 3.7em;
+  font-size: 1.1em;
+  color: #fff;
+}
+.openingTime ul {
+  list-style: outside none none;
+  text-align: center;
+  padding: 1.3em 0;
+  margin: 0;
+}
+.openingTime li {
+  display: inline-block;
+  margin: 0 1em;
+}
+.openingTime em.current-day {
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+/* top picks */
+.top-picks {
+  background-color: #FFF;
+  padding: 1em;
+  position: relative;
+  margin-top: 4em;
+  margin-bottom: 8em;
+}
+.top-picks .primary-img {
+  margin-right: 2%;
+  float: left;
+  width: 68.5%;
+}
+.top-picks .secondary-img {
+  padding-bottom: 1em;
+  width: 29.5%;
+}
+.top-picks > h1 {
+  padding: 0.6em 1.5em;
+  position: absolute;
+  top: -2.3em;
+  left: 0;
+}
+.top-picks > h1 b {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+.top-picks h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  color: #000;
+  margin-top: 0em;
+  font-size: 1.6em;
+}
+.top-picks p {
+  margin: 0px 0px 10px;
+  font-size: 1.1em;
+  line-height: 130%;
+  width: 66%;
+}
+
+
+/* henks facebook events */
+.henks-facebook {
+  position: relative;
+  background-color: #FFF;
+  padding: 1.2em 1.8em 1.5em;
+  background-image: url("../img/facebook-image.png");
+  background-position: 100% top;
+  background-repeat: no-repeat;
+  margin-bottom: 4em;
+  background-size: contain;
+}
+.henks-facebook > h1 {
+  padding: 0.6em 1.5em;
+  position: absolute;
+  top: -2.3em;
+  left: 0;
+}
+.henks-facebook > h1 b {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+.henks-facebook h2 {
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: bold;
+  color: #000;
+  margin-top: 0em;
+  font-size: 1.6em;
+  line-height: 105%;
+}
+.henks-facebook p,
+.henks-facebook h2 {
+  width: 50%;
+}
+.henks-facebook p {
+  margin-bottom: 1.6em;
+}
+.henks-facebook a.nav-link {
+  bottom: auto;
+  right: auto;
+  position: static;
+  display: inline-block;
+  color: #39a2de;
+}
+.henks-facebook .date {
+  position: absolute;
+  display: inline-block;
+  right: 2em;
+  bottom: 1em;
+  color: #fff;
+}
+.henks-facebook .date-day,
+.henks-facebook .date-month {
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: 600;
+  display: block;
+  text-align: right;
+}
+.henks-facebook .date-day {
+  font-size: 5em;
+  line-height: 0.85em;
+}
+.henks-facebook .date-month {
+  font-size: 1.3em;
+  line-height: 1em;
+}
+
+
+/* actiekaart */
+.actiekaart {
+  margin-bottom: 9em;
+  margin-top: 3.5em;
+  padding-left: 3em;
+}
+.actiekaart h1 {
+  font-family: "badaboom_bbregular",sans-serif;
+  font-size: 3.8em;
+  padding: 0px;
+  background: transparent none repeat scroll 0% 0%;
+  color: #ee1d25 ;
+  text-shadow: 3px 3px 0px #000;
+}
+.actiekaart img {
+  width: 14em;
+  float: left;
+  margin-right: 1.5em;
+  margin-left: 0.5em;
+}
+.actiekaart .textblock {
+  width: 11em;
+  float: left;
+}
+.actiekaart a.nav-link {
+  margin-top: 1em;
+  bottom: unset;
+  right: unset;
+}
+
+
+/* ask henk */
+.ask-henk {
+  margin-bottom: 4em;
+  padding-left: 3em;
+}
+.ask-henk .innerbox {
+  background-color: #2E2E2E;
+  padding: 5em 3em 3em 3em;
+  position: relative;
+}
+.ask-henk .innerbox .ask-henk-logo,
+.ask-henk .innerbox .ask-henk-head {
+  position: absolute;
+}
+.ask-henk .innerbox .ask-henk-logo {
+  top: 2.7em;
+  left: 4em;
+}
+.ask-henk .innerbox .ask-henk-head {
+  top: -4.7em;
+  left: 8.4em;
+}
+.ask-henk .conversation {
+  background-color: #FFF;
+  height: 22em;
+  margin-bottom: 1.5em;
+  padding: 1em;
+}
+.ask-henk .conversation p.question,
+.ask-henk .conversation p.answer {
+  font-style: italic;
+  color: #000;
+  padding: 1em;
+  border-radius: 1em;
+}
+.ask-henk .conversation p.question {
+  background-color: #9bd19c;
+  margin-left: 2em;
+}
+.ask-henk .conversation p.answer {
+  background-color: #e5e5e5;
+  margin-right: 2em;
+}
+.ask-henk label {
+  color: #FFF;
+  width: 100%;
+}
+.ask-henk input {
+  width: 84%;
+  display: inline-block;
+  height: 2.4em;
+  margin-top: 0.6em;
+}
+.ask-henk button {
+  width: 16%;
+  display: inline-block;
+  color: #fff;
+  background-color: #ee1d25;
+  border: none;
+  outline: none;
+  height: 2.4em;
+}
+
+
+/* upcoming event */
+.event {
+  padding-bottom: 3em; 
+}
+.event .event-image {
+  width: 100%;
+  margin: -1px 0 0 0;
+}
+.event h1 {
+  position: absolute;
+  top: -2.3em;
+}
+
+/* upcoming event */
+.location {
+  text-align: center;
+  background-color: #ee1d25;
+}
+.location h1 {
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+.location .map-container {
+  background-color: #fff;
+  height: 30em;
+}
+
+footer {}
+footer ul {
+  list-style: outside none none;
+  text-align: center;
+  padding: 1.3em 0;
+  margin: 0;
+}
+footer ul li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+/* bg box */
+.graybg {
+  padding: 4em 0 0 0;
+  background-color: #dbdbdb;
+}

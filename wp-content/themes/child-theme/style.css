@@ -1,0 +1,287 @@
+/*
+Theme Name: Henk Comics - Child Thema
+Theme URI: http://www.comics.nl
+Description: Child thema ontwikkelt voor Henk Comics, gebasseerd op Just Right Webdesign haar basis thema.
+Author: Ronny Rook / Just Right Webdesign
+Author URI: http://www.justrightwebdesign.nl
+Template: basic-theme
+Version: 1.0
+*/
+/*----------------------------------------------------- Typography */
+body {
+  color: #111111;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+a:link,
+a:visited,
+a:active {
+  color: #111111;
+  text-decoration: none;
+}
+a:link:hover,
+a:visited:hover,
+a:active:hover {
+  color: #111111;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Open Sans', Helvetica, 'sans-serif';
+}
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.2em;
+}
+/*----------------------------------------------------- Objects */
+.btn {
+  display: inline-block;
+  padding: .8rem 1rem;
+  border: 1px solid #c1c1c1;
+  font-size: 12pt;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.btn span {
+  float: left;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.btn span.ui {
+  font-size: 18pt;
+  margin: 1px 0 0 0;
+}
+.btn:hover {
+  color: #edf0f6;
+  background: #111111;
+}
+form {
+  width: 100%;
+}
+form fieldset:last-child {
+  text-align: center;
+}
+form select,
+form textarea,
+form input[type='tel'],
+form input[type='text'],
+form input[type='email'],
+form input[type='password'] {
+  padding: .8rem;
+  outline: none;
+  border: 1px solid #c1c1c1;
+  background: #edf0f6;
+}
+form select:focus,
+form textarea:focus,
+form input[type='tel']:focus,
+form input[type='text']:focus,
+form input[type='email']:focus,
+form input[type='password']:focus {
+  border: 1px solid #111111;
+}
+form input[type='submit'],
+form button[type='submit'] {
+  display: inline-block;
+  padding: .8rem 1rem;
+  outline: none;
+  color: #edf0f6;
+  background: #111111;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+form select {
+  padding-right: 1.5%;
+  cursor: pointer;
+}
+form select:not([multiple]) {
+  background: #edf0f6 url('assets/images/arrow.png') no-repeat 97.5% 50%;
+  background-size: 3% auto;
+}
+form input[type='radio'],
+form input[type='checkbox'] {
+  display: none;
+}
+form input[type='radio'] input[type='checkbox'] + label {
+  cursor: pointer;
+}
+form input[type='radio'] input[type='checkbox'] + label span.box {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 5px 7px 0 0;
+  background: #edf0f6;
+  border: 2px solid #c1c1c1;
+  cursor: pointer;
+}
+form input[type='radio'] input[type='checkbox'] + label span.option {
+  float: left;
+  margin-top: 10px;
+  color: #111111;
+  font-size: 12pt;
+}
+form input[type='radio'] input[type='checkbox']:checked + label span.box {
+  background: #111111;
+  background-size: 100% 100%;
+}
+form input[type='radio'] + label span.box {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+hr {
+  width: 100%;
+  height: 2px;
+  float: left;
+  border: 0;
+  background: #c1c1c1;
+}
+section.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 33em;
+}
+section.slider.slideAnimation {
+  overflow: hidden;
+}
+section.slider.slideAnimation div.slides div.slide {
+  position: relative;
+  float: left;
+}
+section.slider div.slides {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section.slider div.slides div.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+section.slider div.slides div.slide > a,
+section.slider div.slides div.slide figure {
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding: 0;
+}
+section.slider div.slides div.slide figure {
+  overflow: hidden;
+  background: center center no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+section.slider div.slides div.slide figure img {
+  width: 100%;
+}
+/*----------------------------------------------------- Layout */
+body {
+  background: #f9f9f9;
+}
+header.header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  float: left;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0 1px 4px 0 rgba(1, 2, 2, 0.2);
+  -moz-box-shadow: 0 1px 4px 0 rgba(1, 2, 2, 0.2);
+  box-shadow: 0 1px 4px 0 rgba(1, 2, 2, 0.2);
+}
+header.header a.logo {
+  width: 20em;
+  float: left;
+  margin-bottom: -0.3rem;
+}
+header.header a.logo span {
+  width: 100%;
+  float: left;
+}
+header.header a.logo span object {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+}
+header.header nav.primary ul {
+  margin-top: .5rem;
+}
+header.header nav.primary ul li {
+  float: left;
+  margin-right: 1rem;
+}
+header.header nav.primary ul li:last-child {
+  margin-right: 0;
+}
+header.header nav.primary ul li > a {
+  display: block;
+  padding: 1rem;
+}
+main {
+  position: relative;
+  z-index: 1;
+  /* --- HOMEPAGE --- */
+}
+main section.content {
+  width: 100%;
+  float: left;
+  background: #fff;
+}
+main section.home {
+  margin-top: 20rem;
+}
+main section.home section.gallery {
+  position: relative;
+  width: 100%;
+  height: 23em;
+  float: left;
+  margin: 3rem 0;
+  overflow: hidden;
+}
+main section.home section.gallery div {
+  position: absolute;
+}
+main section.home section.gallery div a {
+  width: 15em;
+  height: 100%;
+  float: left;
+}
+main section.home section.gallery div a figure {
+  width: 100%;
+  height: 20em;
+  display: block;
+  overflow: hidden;
+}
+main section.home section.gallery div a figure img {
+  width: 100%;
+  margin-bottom: -1rem;
+}
+main section.home section.gallery div a h1 {
+  font-size: 1em;
+}
+/*----------------------------------------------------- Media Queries */

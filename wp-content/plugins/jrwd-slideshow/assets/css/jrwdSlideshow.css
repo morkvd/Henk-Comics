@@ -1,0 +1,119 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.alignleft {
+  float: left !important;
+}
+.alignright {
+  float: right !important;
+}
+.hidden {
+  display: none;
+}
+div.jrwd {
+  width: 98%;
+  float: left;
+}
+div.jrwd header {
+  width: 100%;
+  float: left;
+  margin-bottom: 5px;
+}
+div.jrwd header h2 {
+  float: left;
+  margin-right: 25px;
+}
+div.jrwd header a.button {
+  float: left;
+  margin-top: 10px;
+}
+div.jrwd > form {
+  width: 100%;
+  float: left;
+  margin: 0;
+}
+div.jrwd > form > div,
+div.jrwd > form > fieldset {
+  width: 60%;
+  float: left;
+  clear: both;
+  margin-bottom: 15px;
+}
+div.jrwd > form > div fieldset {
+  width: 100%;
+}
+div.jrwd > form label {
+  width: 100%;
+  float: left;
+  margin: 3px 0;
+  font-weight: bold;
+}
+div.jrwd > form select,
+div.jrwd > form input[type='text'],
+div.jrwd > form input[type='email'] {
+  width: 100%;
+  float: left;
+  padding: 8px;
+}
+div.jrwd > form input[type='button'] {
+  float: left;
+  clear: both;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+div.jrwd > form span#fileName {
+  float: left;
+  margin: 6px 0 0 10px;
+  color: grey;
+  font-style: italic;
+}
+div.jrwd > form .buttonText,
+div.jrwd > form .buttonUrl {
+  width: 49.5% !important;
+}
+div.jrwd > form .addButton {
+  float: left;
+}
+div.jrwd > form .deleteButton {
+  float: right;
+}
+div.jrwd table.widefat tbody .check-column {
+  padding: 8px 10px;
+}
+div.jrwd table td.image div {
+  max-width: 150px;
+  height: 80px;
+  background: center center no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+div.jrwd table form {
+  margin: 0;
+}
+div.jrwd span.move {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 5px 0 0 1px;
+  cursor: move;
+}
+div.jrwd span.move img {
+  width: 100%;
+}
+div.jrwd .deleteMore,
+div.jrwd .updateOrder {
+  margin: 10px 0;
+}
+.updated {
+  width: 100%;
+  float: left;
+  margin: 0 0 10px 0 !important;
+}

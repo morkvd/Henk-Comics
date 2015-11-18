@@ -1,0 +1,150 @@
+.drop-shadow (@x-axis: 0, @y-axis: 1px, @blur: 4px, @offset: 0, @alpha: 0.2) {
+	-webkit-box-shadow: @x-axis @y-axis @blur @offset rgba(1, 2, 2, @alpha);
+	-moz-box-shadow: @x-axis @y-axis @blur @offset rgba(1, 2, 2, @alpha);
+	box-shadow: @x-axis @y-axis @blur @offset rgba(1, 2, 2, @alpha);
+}
+
+.cover(@scale: cover, @position: center) {
+	background: @position center no-repeat;
+	background-position: @position;
+    -webkit-background-size: @scale;
+       -moz-background-size: @scale;
+         -o-background-size: @scale;
+            background-size: @scale;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+
+.rounded-corners (@radius: 3px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+        -ms-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+section.slider {
+	position: relative;
+	width: 100%; height: 400px;
+	float: left;
+
+	div.timer {
+		position: absolute;
+		bottom: 0; left: 0;
+		width: 0%; height: 5px;
+		z-index: 100;
+		background: #000;
+	}
+
+	div.slides {
+		position: relative;
+		width: 100%; height: 100%;
+
+		div.slide {
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			z-index: 5;
+
+			>a, figure {
+				width: 100%; height: 100%;
+				float: left;
+				padding: 0;
+			}
+
+			figure {
+				overflow: hidden;
+				.cover();
+
+				img {
+					width: 100%;
+				}
+			}
+
+			article.txt {
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%;
+				padding: 25px 165px;
+				z-index: 10;
+
+				span {
+					float: left;
+					clear: both;
+					margin-bottom: 5px;
+					padding: 15px;
+					font-size: 20pt;
+					font-weight: bold;
+					background: rgba(255,255,255, 0.5);
+				}
+			}
+
+			div.buttons {
+				float: right;
+
+				a.btn {
+					float: left;
+					margin-right: 5px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+
+			div.push {
+				width: 100%; height: 110px;
+			}
+		}
+	}
+
+	&.slideAnimation {
+		overflow: hidden;
+
+		div.slides div.slide {
+			position: relative;
+			float: left;
+		}
+	}
+
+	nav.secondary {
+		position: absolute;
+		left: 0; top: 50%;
+		width: 100%; height: 50px;
+		margin-top: -25px;
+		z-index: 99;
+
+		span {
+			float: left;
+			padding: 10px;
+			cursor: pointer;
+			font-size: 12pt;
+			text-transform: uppercase;
+			background: rgba(255,255,255, 0.3);
+
+			&.next {
+				float: right;
+			}
+
+			&:hover {
+				background: rgba(255,255,255, 0.8);
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	section.slider {
+		height: 255px;
+		.drop-shadow();
+
+		div.slides div.slide figure {
+			width: 100%;
+			.cover(auto 100%);
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	section.slider { height: 235px;}
+}

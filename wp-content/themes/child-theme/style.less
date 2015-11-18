@@ -1,0 +1,312 @@
+/*
+Theme Name: Henk Comics - Child Thema
+Theme URI: http://www.comics.nl
+Description: Child thema ontwikkelt voor Henk Comics, gebasseerd op Just Right Webdesign haar basis thema.
+Author: Ronny Rook / Just Right Webdesign
+Author URI: http://www.justrightwebdesign.nl
+Template: basic-theme
+Version: 1.0
+*/
+
+/*----------------------------------------------------- Typography */
+@light: #edf0f6;
+@border: #c1c1c1;
+@dark: #111111;
+
+// Fonts
+body {
+	color: @dark;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+a:link, a:visited, a:active {
+	color: @dark;
+	text-decoration: none;
+
+	&:hover { color: @dark;}
+}
+
+h1, h2, h3 { font-family: 'Open Sans', Helvetica, 'sans-serif'; }
+
+h1 { font-size: 1.8em;}
+
+h2 { font-size: 1.5em;}
+
+h3 { font-size: 1.2em;}
+
+@import (less) '../../../libaries/css/functions.less';
+
+
+/*----------------------------------------------------- Objects */
+// Buttons
+.btn {
+	display: inline-block;
+	padding: .8rem 1rem;
+	border: 1px solid @border;
+	font-size: 12pt;
+	.transition();
+
+	span {
+		float: left;
+		.transition();
+
+		&.ui {
+			font-size: 18pt;
+			margin: 1px 0 0 0;
+		}
+	}
+
+	&:hover {
+		color: @light;
+		background: @dark;
+	}
+}
+
+// Formulieren
+form {
+	width: 100%;
+
+	fieldset:last-child { text-align: center; }
+
+	select,
+	textarea,
+	input[type='tel'],
+	input[type='text'],
+	input[type='email'],
+	input[type='password'] {
+		padding: .8rem;
+		outline: none;
+		border: 1px solid @border;
+		background: @light;
+
+		&:focus { border: 1px solid @dark; }
+	}
+
+	input[type='submit'],
+	button[type='submit'] {
+		display: inline-block;
+		padding: .8rem 1rem;
+		outline: none;
+		color: @light;
+		background: @dark;
+		.transition();
+	}
+
+	select {
+		padding-right: 1.5%;
+		cursor: pointer;
+
+		&:not([multiple]) {
+			background: @light url('assets/images/arrow.png') no-repeat 97.5% 50%;
+			background-size: 3% auto;
+		}
+	}
+
+	input[type='radio'],
+	input[type='checkbox'] { display: none;}
+
+	input[type='radio']
+	input[type='checkbox'] {
+		+label {
+			cursor: pointer;
+
+			span {
+				&.box {
+					float: left;
+					width: 30px;
+					height: 30px;
+					margin: 5px 7px 0 0;
+					background: @light;
+					border: 2px solid @border;
+					cursor: pointer;
+				}
+
+				&.option {
+					float: left;
+					margin-top: 10px;
+					color: @dark;
+					font-size: 12pt;
+				}
+			}
+		}
+
+		&:checked + label span.box {
+			background: @dark;
+			background-size: 100% 100%;
+		}
+	}
+
+	input[type='radio'] + label span.box { .rounded-corners(50%);}
+}
+
+// Horizontaal line
+hr {
+	width: 100%; height: 2px;
+	float: left;
+	border: 0;
+	background: @border;
+}
+
+// Slideshow
+section.slider {
+	position: absolute;
+	top: 0; left: 0;
+	z-index: 0;
+
+	width: 100%; height: 33em;
+
+	&.slideAnimation {
+		overflow: hidden;
+
+		div.slides div.slide {
+			position: relative;
+			float: left;
+		}
+	}
+
+	div.slides {
+		position: relative;
+		top: 0; left: 0;
+
+		width: 100%; height: 100%;
+
+		div.slide {
+			position: absolute;
+			top: 0; left: 0;
+			z-index: 5;
+
+			width: 100%; height: 100%;
+
+			>a, figure {
+				width: 100%; height: 100%;
+				float: left;
+				padding: 0;
+			}
+
+			figure {
+				overflow: hidden;
+				.cover();
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+/*----------------------------------------------------- Layout */
+body { background: #f9f9f9;}
+
+header.header {
+	position: relative;
+	z-index: 2;
+
+	width: 100%;
+	float: left;
+	padding: 1rem 2rem;
+	background: rgba(255,255,255, 0.9);
+	.drop-shadow();
+
+	a.logo {
+		width: 20em;
+		float: left;
+		margin-bottom: -.3rem;
+
+		span {
+			width: 100%;
+			float: left;
+
+			object {
+				position: relative;
+				z-index: -1;
+				width: 100%;
+			}
+		}
+	}
+
+	nav.primary ul {
+		margin-top: .5rem;
+
+		li {
+			float: left;
+			margin-right: 1rem;
+
+			&:last-child { margin-right: 0;}
+
+			>a {
+				display: block;
+				padding: 1rem;
+			}
+		}
+	}
+}
+
+main {
+	position: relative;
+	z-index: 1;
+
+	// Standaard content box
+	section.content {
+		width: 100%;
+		float: left;
+		background: #fff;
+	}
+
+
+	/* --- HOMEPAGE --- */
+	section.home {
+		margin-top: 20rem;
+
+		// Gallery met horizontale slide
+		section.gallery {
+			position: relative;
+			width: 100%; height: 23em;
+			float: left;
+			margin: 3rem 0;
+			overflow: hidden;
+
+			div {
+				position: absolute;
+
+				a {
+					width: 15em; height: 100%;
+					float: left;
+
+					figure {
+						width: 100%; height: 20em;
+						display: block;
+						overflow: hidden;
+
+						img {
+							width: 100%;
+							margin-bottom: -1rem;
+						}
+					}
+
+					h1 {
+						font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------- Media Queries */
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+}

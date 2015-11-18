@@ -1,0 +1,165 @@
+/*
+Theme Name: Basic Thema - Just Right Webdesign
+Theme URI: http://www.justrightwebdesign.nl
+Author: Just Right Webdesign
+Author URI: http://www.justrightwebdesign.nl
+Description: Basis thema voor klanten van Just Right Wedesign
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: basic-theme
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins,
+kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, menu, time, mark, audio, video
+{ margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+
+* {
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+       -o-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+}
+
+ul { list-style: none;}
+img { border: none;}
+p { margin-bottom: 0.8rem;}
+
+.alignleft { float: left; }
+.alignright { float: right !important;}
+
+.clear { clear: both;}
+
+
+/*----------------------------------------------------- Typography */
+body {
+	color: #000;
+    font-size: 1em;
+    font-family: 'Open Sans', 'Myriad Pro', sans-serif;
+}
+
+// Icons
+.ui {
+	font-style: normal;
+	font-family: UIFONT, sans-serif;
+}
+.fo {
+	font-style: normal;
+	font-family: 'fontello', sans-serif;
+}
+.fa {
+	font-style: normal;
+	font-family: FontAwesome, sans-serif;
+}
+
+h1, h2, h3 { font-family: 'Open Sans', 'Myriad Pro', sans-serif; }
+
+h1 { font-size: 1.8em;}
+
+h2 { font-size: 1.5em;}
+
+h3 { font-size: 1.2em;}
+
+
+/*----------------------------------------------------- Objects */
+// Form
+form {
+	select,
+	textarea,
+    input[type='tel'],
+    input[type='text'],
+    input[type='email'],
+    input[type='password'] {
+    	width: 100%;
+    	float: left;
+		-webkit-appearance: none;
+		   -moz-appearance: none;
+				appearance: none;
+    }
+
+    textarea {
+    	max-width: 100%;
+    	min-height: 150px;
+    }
+
+    input[type='submit'] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+    }
+
+	::-webkit-input-placeholder { color: #ccc;}
+	:-moz-placeholder { color: #ccc;}/* Firefox 18 */
+	::-moz-placeholder { color: #ccc;} /* Firefox 19+ */
+	:-ms-input-placeholder { color: #ccc;}
+}
+
+// No script
+noscript {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	padding: 10px;
+	text-align: center;
+	background: url('assets/images/pngFallback/black50.png') repeat;
+	background: rgba(0,0,0, 0.5);
+	z-index: 999999;
+
+	div {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%;
+		padding: 15px;
+		background: yellow;
+	}
+}
+
+
+/*----------------------------------------------------- Layout */
+nav.primary >ul >li {
+	position: relative;
+	float: left;
+
+	ul.sub-menu {
+		position: absolute;
+		top: 1.5rem; left: 0;
+		z-index: 10;
+		display: none;
+
+		li { white-space: nowrap; }
+	}
+
+	&:hover ul.sub-menu { display: block; }
+}
+
+main {
+	img {
+		max-width: 100%; height: auto;
+		margin-bottom: 1rem;
+
+		&.alignright { margin-left: 1rem; }
+		&.alignleft { margin-right: 1rem; }
+	}
+
+	ul {
+		margin-left: 1rem;
+		list-style: disc;
+	}
+
+	ol { margin-left: 1rem;}
+}
+
+
+/*----------------------------------------------------- Media Queries */
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
