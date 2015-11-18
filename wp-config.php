@@ -23,10 +23,10 @@
 define('DB_NAME', 'capybara_wp');
 
 /** MySQL database username */
-define('DB_USER', 'capybara_ronny');
+define('DB_USER', 'capybara_henk');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'Skreamb2bBenga');
+define('DB_PASSWORD', 'henkcomics123');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
