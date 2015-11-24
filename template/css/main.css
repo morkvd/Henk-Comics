@@ -380,17 +380,45 @@ nav.top-menu {
 /* upcoming event */
 .event {
   padding-bottom: 3em; 
+  background-image: url(../img/event-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  color: #fff;
 }
 .event .event-image {
   width: 100%;
-  margin: -1px 0 0 0;
+  margin: -1px 0 0 0; /*  fix for mysterious margin on the event image, oh css you so crazy. */
 }
 .event h1 {
   position: absolute;
   top: -2.3em;
 }
+.event h2 {
+  font-weight: 900;
+  font-size: 3.6em;
+  margin-bottom: 0.4em;
+}
+.event h3 {
+  font-family: "badaboom_bbregular",sans-serif;
+  font-size: 5em;
+  margin-top: -0.5em;
+  text-shadow: 0.1em 0.1em 1em #000;
+  letter-spacing: -2px;
+}
+.event p.intro {
+  font-size: 1.6em;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: .8em;
+}
+.event p {
+  font-size: 1.2em;
+}
+.event .col-md-5:first-child p {
+  padding-right: 1em;
+}
 
-/* upcoming event */
+/* location */
 .location {
   text-align: center;
   background-color: #ee1d25;
