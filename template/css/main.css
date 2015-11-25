@@ -17,6 +17,27 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* menu */
+nav {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0px 1px 4px 0px rgba(1, 2, 2, 0.2);
+}
+nav img.henk-logo {
+  height: 3em;
+}
+nav ul {
+  list-style: outside none none;
+  display: inline-block;
+  float: right;
+}
+nav ul li {
+  
+  display: inline-block;
+  padding: .8em;
+}
+
+
 /* Title block */
 section h1 {
   font-family: "Source Sans Pro",sans-serif;
@@ -33,7 +54,7 @@ section > h1 b {
   color: #fff;
 }
 
-/*  */
+/* standard link button thingy */
 a.nav-link {
   background-color: #000;
   color: #ee1d25;
@@ -237,6 +258,8 @@ nav.top-menu {
 .henks-facebook .date-day,
 .henks-facebook .date-month {
   font-family: "Source Sans Pro",sans-serif;
+  text-shadow: 0.1em 0.1em 1em #000,
+               0em 0em 1em #000;
   font-weight: 600;
   display: block;
   text-align: right;
@@ -414,8 +437,8 @@ nav.top-menu {
 .event p {
   font-size: 1.2em;
 }
-.event .col-md-5:first-child p {
-  padding-right: 1em;
+.event .event-textcontainer .row + .row .col-md-5:first-child {
+  
 }
 
 /* location */
