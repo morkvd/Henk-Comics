@@ -97,6 +97,9 @@ img {
 p {
   margin-bottom: 0.8rem;
 }
+p:last-child {
+  margin-bottom: 0;
+}
 .alignleft {
   float: left;
 }
@@ -226,10 +229,10 @@ main img.alignleft {
   margin-right: 1rem;
 }
 main ul {
-  margin-left: 1rem;
+  margin-left: 1.2rem;
   list-style: disc;
 }
 main ol {
-  margin-left: 1rem;
+  margin-left: 1.2rem;
 }
 /*----------------------------------------------------- Media Queries */

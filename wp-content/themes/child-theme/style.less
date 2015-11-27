@@ -10,8 +10,12 @@ Version: 1.0
 
 /*----------------------------------------------------- Typography */
 @light: #edf0f6;
-@border: #c1c1c1;
 @dark: #111111;
+
+@red: #ED1C24;
+
+@border: #c1c1c1;
+
 
 // Fonts
 body {
@@ -195,6 +199,67 @@ section.slider {
 	}
 }
 
+// Gallerij
+section.gallery {
+	position: relative;
+	width: 100%; height: 23em;
+	float: left;
+	margin: 3rem 0;
+	overflow: hidden;
+
+	&:hover span.navigate { display: block;}
+
+	span.navigate {
+		position: absolute;
+		top: 8rem;
+		z-index: 1;
+
+		display: none;
+		padding: .7rem;
+		cursor: pointer;
+		color: #fff;
+		font-size: 2rem;
+		background: @red;
+
+		&[class*="left"] {
+			left: 0;
+			padding-left: .6rem;
+		}
+		&[class*="right"] {
+			right: 0;
+			padding-right: .6rem;
+		}
+	}
+
+	div {
+		position: absolute;
+
+		a {
+			width: 15em; height: 100%;
+			float: left;
+
+			&:hover h1 { color: @red;}
+
+			figure {
+				width: 100%; height: 20em;
+				display: block;
+				margin-bottom: .2rem;
+				overflow: hidden;
+				.drop-shadow();
+
+				img { width: 100%;}
+			}
+
+			h1 {
+				font-size: 1rem;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+
+
 
 /*----------------------------------------------------- Layout */
 body { background: #f9f9f9;}
@@ -258,39 +323,6 @@ main {
 	/* --- HOMEPAGE --- */
 	section.home {
 		margin-top: 20rem;
-
-		// Gallery met horizontale slide
-		section.gallery {
-			position: relative;
-			width: 100%; height: 23em;
-			float: left;
-			margin: 3rem 0;
-			overflow: hidden;
-
-			div {
-				position: absolute;
-
-				a {
-					width: 15em; height: 100%;
-					float: left;
-
-					figure {
-						width: 100%; height: 20em;
-						display: block;
-						overflow: hidden;
-
-						img {
-							width: 100%;
-							margin-bottom: -1rem;
-						}
-					}
-
-					h1 {
-						font-size: 1em;
-					}
-				}
-			}
-		}
 	}
 }
 

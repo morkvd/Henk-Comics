@@ -1,5 +1,5 @@
 <?php
-	/**----/ Clean up the <head> */
+	/**----/ Clean up the <head> **/
 	function removeHeadLinks() {
     	remove_action('wp_head', 'rsd_link');
     	remove_action('wp_head', 'wlwmanifest_link');
@@ -7,13 +7,12 @@
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
 
-    /**----/ Avoid double jQuery version files */
+
+    /**----/ Avoid double jQuery version files **/
     function removejQuery() {
         wp_deregister_script('jquery');
     }
-
-    if ( !is_admin() )
-        add_action('wp_enqueue_scripts', 'removejQuery');
+    if (!is_admin()) add_action('wp_enqueue_scripts', 'removejQuery');
 
 
     /**----/ Register navigation menu
@@ -21,7 +20,7 @@
      * Register two menus for header and footer
      *
      * @codex http://codex.wordpress.org/Function_Reference/register_nav_menu
-     */
+     **/
     add_action( 'after_setup_theme', 'register_menus' );
     function register_menus() {
         register_nav_menus( array(
@@ -33,7 +32,7 @@
     /**----/ Register sidebar
      *
      * @codex http://codex.wordpress.org/Function_Reference/register_sidebar
-     */
+     **/
     if (function_exists('register_sidebar')) {
     	register_sidebar(array(
     		'name' => 'Default Widgets',
@@ -49,124 +48,31 @@
     }
 
 
-    /**----/ Clean url
-     *
-     * @param url string
-     * @return string returns clean url
-     *
-     * @author Ronny Rook / Just Right Webdesign
-     */
-    function clean($string) {
-        $string = str_replace(' ', '-', $string);
-        return preg_replace('/[^A-Za-z0-9\-]/', '', $string);
-    }
-
-
     /**----/ Featured image
      *
      * Enables featured images for pages instead it's only aviable for posts
      *
      * @author Ronny Rook / Just Right Webdesign
      **/
-    add_theme_support('post-thumbnails', array( 'post', 'page' ));
-
     function get_the_post_thumbnail_src($img) {
         return (preg_match('~\bsrc="([^"]++)"~', $img, $matches)) ? $matches[1] : false;
     }
+    add_theme_support('post-thumbnails', array( 'post', 'page' ));
 
 
-    /**----/ Theme settings
-     *
-     * Creates theme settings array: Appearance > Voorkeuren
-     *
-     * @requires settings.php (in folder /basic-theme)
-     * @author Ronny Rook / Just Right Webdesign
-     **/
-    if (is_admin())
-	    include_once('settings.php');
-
-    $GLOBALS['settings'] = get_option('jrwd_theme_settings');
+	/**----/ Add excerpt to pages
+	 *
+	 * @author Ronny Rook / Just Right Webdesign
+	 **/
+	function addExcerptsToPages() {
+		add_post_type_support( 'page', 'excerpt' );
+	}
+	add_action( 'init', 'addExcerptsToPages' );
 
 
-    /**----/ Shorten title & content
-     *
-     * Shorten the title or content
-     *
-     * @param string $title | title that needs to be shorten
-     * @param string $slug | prefix of the link
-     * @param int $length | how many characters it will be
-     * @return string $output | shorter title
-     * @author Ronny Rook / Just Right Webdesign
-     **/
-    function shortenTitle($title, $slug = null, $length = 25, $link = true)
-    {
-        $title = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
+	/**----/ Add post thumbnails for every post type **/
+	add_theme_support('post-thumbnails');
 
-        if (strlen($title) > $length) {
-            if ($link) {
-                $output = sprintf('
-                    <a href="/%s" title="%s">
-                        %s ..
-                    </a>
-                ', $slug, ucfirst($title), ucfirst(mb_substr($title, 0, $length, 'UTF-8')));
-            } else {
-                $output = sprintf('
-                    <span>%s ..</span>
-                ', ucfirst(mb_substr($title, 0, $length, 'UTF-8')));
-            }
-        } else {
-            if ($link) {
-                $output = sprintf('
-                    <a href="/%s" title="%s">
-                        %s
-                    </a>
-                ', $link.$slug, ucfirst($title), ucfirst($title));
-            } else {
-                $output = sprintf('
-                    <span>%s</span>
-                ', ucfirst($title));
-            }
-        }
-
-        return $output;
-    }
-
-    function shortenContent($content, $length)
-    {
-        if (strlen($content) > $length) {
-            $output = sprintf('
-                %s ..
-            ', substr($content, 0, $length));
-        } else {
-            $output = sprintf('
-                %s ..
-            ', $content );
-        }
-
-        return $output;
-    }
-
-    function excerpt_length($limit)
-    {
-        $excerpt = explode(' ', get_the_excerpt(), $limit);
-        if (count($excerpt) >= $limit) {
-            array_pop($excerpt);
-            $excerpt = implode(' ', $excerpt) .' ..';
-        } else $excerpt = implode(' ', $excerpt);
-
-        $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
-        return $excerpt;
-    }
-
-
-    /**----/ Add excerpt to pages
-     *
-     * @author Ronny Rook / Just Right Webdesign
-     **/
-    function addExcerptsToPages() {
-        add_post_type_support( 'page', 'excerpt' );
-    }
-    add_action( 'init', 'addExcerptsToPages' );
 
 	/**----/ Remove image links
 	 *
@@ -181,6 +87,17 @@
 			update_option('image_default_link_type', 'none');
 	}
 	add_action('admin_init', 'removeImageLinks', 10);
+
+
+    /**----/ Theme settings
+     *
+     * Creates theme settings array: Appearance > Voorkeuren
+     *
+     * @requires settings.php (in folder /basic-theme)
+     * @author Ronny Rook / Just Right Webdesign
+     **/
+    if (is_admin()) include_once('settings.php');
+    $GLOBALS['settings'] = get_option('jrwd_theme_settings');
 
 
     /**----/ Custom user role
@@ -256,20 +173,70 @@
     add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 
+	/**----/ Custom admin footer **/
+	function remove_footer_admin () {
+		echo sprintf('
+			&copy; %s - <a href="http://www.justrightwebdesign.nl" target="_blank">Just Right Webdesign</a>
+		', date('Y'));
+	}
+	add_filter('admin_footer_text', 'remove_footer_admin');
 
-    /**
-     * Separate media categories from post categories
-     */
+
+	/**----/ Remove dashboard widgets **/
+	add_action('wp_dashboard_setup', 'wpc_dashboard_widgets');
+	function wpc_dashboard_widgets() {
+		remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+		remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
+		remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+		remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
+		remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+		remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+		remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+		remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//since 3.8
+	}
+
+
+	/**----/ Remove emoji bullshit **/
+	function disable_wp_emojicons() {
+		// all actions related to emojis
+		remove_action( 'admin_print_styles', 'print_emoji_styles' );
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+		remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+		// filter to remove TinyMCE emojis
+		add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+	}
+	add_action('init', 'disable_wp_emojicons');
+	remove_filter('the_content', 'convert_smilies');
+
+	function disable_emojicons_tinymce( $plugins ) {
+		return is_array($plugins) ? array_diff( $plugins, array( 'wpemoji' ) ) : array();
+	}
+
+
+	/**----/ Remove comments admin menu **/
+	function wptutsplus_remove_comments_menu_item() {
+		$user = wp_get_current_user();
+		if (!$user->has_cap('manage_options'))
+			remove_menu_page('edit-comments.php');
+	}
+	add_action('admin_menu', 'wptutsplus_remove_comments_menu_item');
+
+
+	/**----/ Remove WP logo from toolbor in admin **/
+	function remove_wp_logo($wp_admin_bar) {
+		$wp_admin_bar->remove_node('wp-logo');
+	}
+	add_action('admin_bar_menu', 'remove_wp_logo', 999);
+
+
+	/**----/ Separate media categories **/
 	add_filter( 'wpmediacategory_taxonomy', create_function( '', 'return "category_media";' ) );  //requires PHP 4.0.1 or newer
 
 
-
-	/**
-     * Add post thumbnails for every post type
-     */
-    add_theme_support( 'post-thumbnails' );
-
-    /**
-     * Include: Walkers
-     */
+    /**----/ Include: Walkers **/
     include_once( 'inc/walkers/PrimaryArrowWalker.php' );

@@ -24,7 +24,9 @@ thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, m
 
 ul { list-style: none;}
 img { border: none;}
-p { margin-bottom: 0.8rem;}
+p { margin-bottom: 0.8rem;
+	&:last-child { margin-bottom: 0;}
+}
 
 .alignleft { float: left; }
 .alignright { float: right !important;}
@@ -143,11 +145,11 @@ main {
 	}
 
 	ul {
-		margin-left: 1rem;
+		margin-left: 1.2rem;
 		list-style: disc;
 	}
 
-	ol { margin-left: 1rem;}
+	ol { margin-left: 1.2rem;}
 }
 
 
