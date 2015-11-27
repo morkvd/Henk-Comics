@@ -10,11 +10,62 @@
     font-style: normal;
 }
 
+
 body {
   background-image: url(../img/bg.jpg);
   background-size: contain;
   background-repeat: no-repeat; 
+  background-position: 0em 4.2em;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* menu */
+nav {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0px 1px 4px 0px rgba(1, 2, 2, 0.2);
+}
+nav img.henk-logo {
+  height: 3em;
+}
+nav ul {
+  list-style: outside none none;
+  margin: 1em 0 0 0;
+  padding: 0;
+  display: none; /* closed on mobile */
+}
+nav ul.open {
+  display: block;/* open the hamburger menu */
+}
+nav ul li {
+  padding: .8em;
+  text-align: center;
+  border-top: solid 1px #bbb;
+}
+nav ul li a {
+  font-family: "badaboom_bbregular",sans-serif;
+  color: #000;
+  font-size: 1.3em;
+}
+nav ul li ul li:first-child {
+  border-top: none;
+}
+nav a span.caret {
+  margin-left: .3em;
+}
+nav .droppeddown {
+  display: block;
+  position: static;
+  float: none;
+}
+nav .hamburger {
+  font-family: "badaboom_bbregular",sans-serif;
+  color: #000;
+  font-size: 2em;
+  float: right;
+}
+nav .hamburger span.fa {
+  margin-left: .2em;
 }
 
 /* Title block */
@@ -25,7 +76,7 @@ section h1 {
   color: #FFF;
   margin: 0px;
   display: inline-block;
-  padding: 0.6em 1.6em;
+  padding: .6em 1.6em;
 }
 section > h1 b {
   font-family: 'Source Sans Pro', sans-serif;
@@ -33,36 +84,27 @@ section > h1 b {
   color: #fff;
 }
 
-/*  */
+/* standard link button thingy */
 a.nav-link {
   background-color: #000;
   color: #ee1d25;
-  padding: 0.8em 1.8em;
+  padding: .8em 1.8em;
   position: absolute;
   bottom: 1.5em;
   right: 1.5em;
   box-shadow: 5px 4px 0px;
   width: auto;
-  font-size: 0.9em;
+  font-size: .9em;
 }
 a.nav-link span {
-  margin-left: 1em;
-}
-
-
-/* Top menu */
-nav.top-menu {
-  background-color: #fff;
-  color: #000;
-  border: none;
-  border-radius: 0;
+  margin-left: 2.3em;
 }
 
 
 /* new products */
 .featured {
   height: 34em;
-  margin-top: 14em;
+  margin: 18em 0 2em 0;
   position: relative;
   overflow: hidden;
   padding: 0px;
@@ -81,15 +123,13 @@ nav.top-menu {
 }
 .featured div a figure {
   width: 100%;
-  height: 20em;
   display: block;
   overflow: hidden;
 }
 .featured div a figure img {
   width: 100%;
-  margin-bottom: -1rem;
 }
-.featured div a h1 {
+.featured div a figcaption {
   font-size: 1em;
   margin: 0;
   color: #000;
@@ -97,35 +137,45 @@ nav.top-menu {
   text-transform: uppercase;
 }
 .featured > h1 {
-  padding: 0.6em 3.6em;
+  padding: .6em 3.6em;
 }
 .featured a.nav-link {
-  bottom: auto;
-  top: 2.7em;
+  bottom: 0;
   z-index: 100;
-  box-shadow: 5px -4px 0px;
+  box-shadow: 6px -5px 0px;
   color: #F8F62A;
-  right: 5em;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: .5em .9em;
 }
+.featured a.nav-link span {
+  margin-left: .1em;
+  font-size: .9em;
+}
+
 
 
 /* opening times */
 .openingTime {
   background-image: url(../img/openingsbar.jpg);
   background-repeat: repeat-y; 
+  background-size: cover;
   min-height: 3.7em;
   font-size: 1.1em;
   color: #fff;
+  text-align: center;
 }
 .openingTime ul {
   list-style: outside none none;
   text-align: center;
   padding: 1.3em 0;
   margin: 0;
+  display: inline-block;
 }
 .openingTime li {
-  display: inline-block;
+  display: block;
   margin: 0 1em;
+  text-align: left;
 }
 .openingTime em.current-day {
   font-weight: bold;
@@ -137,7 +187,7 @@ nav.top-menu {
 /* top picks */
 .top-picks {
   background-color: #FFF;
-  padding: 1em;
+  padding: 1em 1em 2em;
   position: relative;
   margin-top: 4em;
   margin-bottom: 8em;
@@ -148,11 +198,11 @@ nav.top-menu {
   width: 68.5%;
 }
 .top-picks .secondary-img {
-  padding-bottom: 1em;
+  padding-bottom: 2.3%;
   width: 29.5%;
 }
 .top-picks > h1 {
-  padding: 0.6em 1.5em;
+  padding: .6em 1.5em;
   position: absolute;
   top: -2.3em;
   left: 0;
@@ -171,26 +221,26 @@ nav.top-menu {
   font-size: 1.6em;
 }
 .top-picks p {
-  margin: 0px 0px 10px;
+  margin: 0 0 1.7em;
   font-size: 1.1em;
   line-height: 130%;
-  width: 66%;
 }
+.top-picks a.nav-link {
+  position: static;
+
+}
+
 
 
 /* henks facebook events */
 .henks-facebook {
   position: relative;
   background-color: #FFF;
-  padding: 1.2em 1.8em 1.5em;
-  background-image: url("../img/facebook-image.png");
-  background-position: 100% top;
-  background-repeat: no-repeat;
-  margin-bottom: 4em;
-  background-size: contain;
+  padding: 0 0 0 1em;
+  margin-bottom: 4em; 
 }
 .henks-facebook > h1 {
-  padding: 0.6em 1.5em;
+  padding: .6em 1.5em;
   position: absolute;
   top: -2.3em;
   left: 0;
@@ -200,6 +250,20 @@ nav.top-menu {
   font-weight: 900;
   color: #fff;
 }
+.henks-facebook .row {
+  margin: 0;
+}
+.henks-facebook .col-xs-6 {
+  padding: 1em;
+}
+.henks-facebook .col-xs-6 + .col-xs-6 {
+  padding: 0;
+  overflow: hidden;
+}
+.henks-facebook .col-xs-6 + .col-xs-6 img {
+  height: 100%;
+  float: right;
+}
 .henks-facebook h2 {
   font-family: "Source Sans Pro",sans-serif;
   font-weight: bold;
@@ -207,10 +271,6 @@ nav.top-menu {
   margin-top: 0em;
   font-size: 1.6em;
   line-height: 105%;
-}
-.henks-facebook p,
-.henks-facebook h2 {
-  width: 50%;
 }
 .henks-facebook p {
   margin-bottom: 1.6em;
@@ -232,18 +292,21 @@ nav.top-menu {
 .henks-facebook .date-day,
 .henks-facebook .date-month {
   font-family: "Source Sans Pro",sans-serif;
+  text-shadow: .1em .1em 1em #000,
+               0em 0em 1em #000;
   font-weight: 600;
   display: block;
   text-align: right;
 }
 .henks-facebook .date-day {
   font-size: 5em;
-  line-height: 0.85em;
+  line-height: .85em;
 }
 .henks-facebook .date-month {
   font-size: 1.3em;
   line-height: 1em;
 }
+
 
 
 /* actiekaart */
@@ -256,15 +319,18 @@ nav.top-menu {
   font-family: "badaboom_bbregular",sans-serif;
   font-size: 3.8em;
   padding: 0px;
-  background: transparent none repeat scroll 0% 0%;
-  color: #ee1d25 ;
-  text-shadow: 3px 3px 0px #000;
+  background-color: transparent;
+  color: #EE1D25;
+  text-shadow: 2px 5px 0px #000;
+  letter-spacing: -2px;
+  margin-bottom: .3em;
+  display: block;
 }
 .actiekaart img {
   width: 14em;
   float: left;
   margin-right: 1.5em;
-  margin-left: 0.5em;
+  margin-left: .5em;
 }
 .actiekaart .textblock {
   width: 11em;
@@ -277,10 +343,11 @@ nav.top-menu {
 }
 
 
+
 /* ask henk */
 .ask-henk {
   margin-bottom: 4em;
-  padding-left: 3em;
+  margin-top: 10em;
 }
 .ask-henk .innerbox {
   background-color: #2E2E2E;
@@ -291,12 +358,13 @@ nav.top-menu {
 .ask-henk .innerbox .ask-henk-head {
   position: absolute;
 }
-.ask-henk .innerbox .ask-henk-logo {
-  top: 2.7em;
-  left: 4em;
-}
 .ask-henk .innerbox .ask-henk-head {
-  top: -4.7em;
+  top: 1.9em;
+  left: 4em;
+  z-index: 99;
+}
+.ask-henk .innerbox .ask-henk-logo {
+  top: -5.7em;
   left: 8.4em;
 }
 .ask-henk .conversation {
@@ -304,21 +372,53 @@ nav.top-menu {
   height: 22em;
   margin-bottom: 1.5em;
   padding: 1em;
+  overflow-x: hidden;
 }
 .ask-henk .conversation p.question,
 .ask-henk .conversation p.answer {
   font-style: italic;
+  font-weight: 900;
   color: #000;
-  padding: 1em;
+  padding: .5em 2.2em;
   border-radius: 1em;
+  position: relative;
+  display: inline-block;
+}
+.ask-henk .conversation p.question:after ,
+.ask-henk .conversation p.answer:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 0;
+  weight: 0;
 }
 .ask-henk .conversation p.question {
-  background-color: #9bd19c;
-  margin-left: 2em;
+  background-color: #9BD19C;
+  margin-left: 17%;
+  margin-right: 3%;
+  float: right;
+  width: 80%;
+}
+.ask-henk .conversation p.question:after {
+  bottom: 30%;
+  right: -0.9em;
+  border-top: .6em solid transparent;
+  border-bottom: .4em solid transparent;
+  border-left: 1em solid #9BD19C;
 }
 .ask-henk .conversation p.answer {
   background-color: #e5e5e5;
-  margin-right: 2em;
+  margin-right: 17%;
+  margin-left: 3%;
+  float: left;
+  width: 80%;
+}
+.ask-henk .conversation p.answer:after {
+  bottom: 30%;
+  left: -0.8em;
+  border-top: .4em solid transparent;
+  border-bottom: .6em solid transparent;
+  border-right: 1em solid #E5E5E5;
 }
 .ask-henk label {
   color: #FFF;
@@ -328,7 +428,7 @@ nav.top-menu {
   width: 84%;
   display: inline-block;
   height: 2.4em;
-  margin-top: 0.6em;
+  margin-top: .6em;
 }
 .ask-henk button {
   width: 16%;
@@ -341,20 +441,63 @@ nav.top-menu {
 }
 
 
+
 /* upcoming event */
-.event {
-  padding-bottom: 3em; 
+.event { 
+  padding-bottom: 7em;
+  background-image: url(../img/event-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  color: #fff;
 }
 .event .event-image {
   width: 100%;
-  margin: -1px 0 0 0;
+  margin: -1px 0 0 0; /*  fix for mysterious margin on the event image, oh css you so crazy. */
 }
 .event h1 {
   position: absolute;
   top: -2.3em;
 }
+.event h2 {
+  font-weight: 900;
+  font-size: 3.6em;
+  margin-bottom: .4em;
+}
+.event h3 {
+  font-family: "badaboom_bbregular",sans-serif;
+  font-size: 5em;
+  margin-top: -0.5em;
+  text-shadow: .1em .1em 1em #000;
+  letter-spacing: -2px;
+}
+.event p.intro {
+  font-size: 1.6em;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: .8em;
+}
+.event p {
+  font-size: 1.2em;
+}
+.event-textcontainer {
+  position: relative;
+}
+.event-textcontainer a.to-event {
+  background-color: #EE1D25;
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: 900;
+  font-size: 2.6em;
+  color: #FFF;
+  padding: .13em .4em .22em;
+  position: absolute;
+  right: .4em;
 
-/* upcoming event */
+    bottom: -1.32em;
+  line-height: 1em;
+}
+
+
+/* location */
 .location {
   text-align: center;
   background-color: #ee1d25;
@@ -383,6 +526,150 @@ footer ul li {
 
 /* bg box */
 .graybg {
-  padding: 4em 0 0 0;
+  padding: 4em 0 3em;
   background-color: #dbdbdb;
+}
+
+
+@media (min-width: 648px) { 
+  .actiekaart {
+    padding-left: 7.5em;
+  }
+  .actiekaart h1 {
+    font-size: 4.8em;
+  }
+
+  .ask-henk {
+    margin: 10em 6em 4em;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .featured {
+    margin: 18em 0 0 0;
+  }
+  .featured a.nav-link {
+    top: 1.9em;
+    right: 2.3em;
+    bottom: auto;
+  }
+
+  .top-picks {
+    padding: 1em;
+  }
+  .top-picks p {
+    margin: 0px;
+    width: 68.5%;
+  }
+  .top-picks a.nav-link {
+    position: absolute;
+    right: 1.5em;
+  }
+
+  .openingTime ul {
+    text-align: center;
+  }
+  .openingTime li {
+    display: inline-block;
+  }
+
+  .actiekaart {
+    padding-left: 10em;
+    margin-bottom: 12em;
+  }
+  .actiekaart img {
+    width: 16em;
+  }
+
+  .ask-henk {
+    margin: 10em 8em 4em;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .top-picks p {
+    width: 62.6%;
+  }
+
+  .actiekaart {
+    margin-bottom: 13em;
+  }
+  .actiekaart h1 {
+    font-family: "badaboom_bbregular",sans-serif;
+    font-size: 3.8em;
+  }
+  .actiekaart img {
+    width: 10em;
+  }
+
+  .actiekaart {
+    padding-left: 3em;
+  }
+
+  .ask-henk {
+    margin: 10em 0 4em 3em;
+  }
+
+  .event .event-textcontainer .row + .row .col-md-5:first-child {
+    padding-right: 4em;
+    border-right: 1px solid rgb(255, 255, 255);
+  }
+  .event .event-textcontainer .row + .row .col-md-5:last-child {
+      padding-left: 4em;
+  }
+  
+  .event {
+    padding-bottom: 3em;
+  }
+  .event-textcontainer a.to-event {
+    right: 0em;
+    bottom: 0em;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .top-picks p {
+    width: 68.6%;
+  }
+
+  .actiekaart h1 {
+    font-size: 4.8em;
+  }
+  .actiekaart img {
+    width: 16em;
+  }
+}
+
+
+/* menu bar media query*/
+@media (min-width: 856px) {
+  nav ul {
+    list-style: outside none none;
+    display: inline-block;
+    float: right;
+    margin: 0;
+  }
+  nav ul li {
+    display: inline-block;
+    padding: .8em;
+    text-align: left;
+    border: none;
+  }
+  nav ul li a {
+    font-family: "badaboom_bbregular",sans-serif;
+    color: #000;
+    font-size: 1.3em;
+  }
+  nav a span.caret {
+    margin-left: .3em;
+  }
+  nav .dropdown {
+    display: inline-block;
+  }
+  nav .hamburger {
+    display: none;
+  }
 }
