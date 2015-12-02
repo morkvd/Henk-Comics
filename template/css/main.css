@@ -12,10 +12,10 @@
 
 
 body {
-  background-image: url(../img/bg.jpg);
-  background-size: contain;
+  background-image: url(../img/bg.jpg);  
   background-repeat: no-repeat; 
-  background-position: 0em 4.2em;
+  background-position: center 4.2em;
+  background-size: 190% auto;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -104,11 +104,12 @@ a.nav-link span {
 /* new products */
 .featured {
   height: 34em;
-  margin: 18em 0 2em 0;
+  margin-top: 18em;
+  margin-bottom: 2em;
   position: relative;
   overflow: hidden;
   padding: 0px;
-  background: transparent;idden;
+  background: transparent;
   padding: 0;
 }
 .featured div {
@@ -159,7 +160,8 @@ a.nav-link span {
 .openingTime {
   background-image: url(../img/openingsbar.jpg);
   background-repeat: repeat-y; 
-  background-size: cover;
+  background-size: 175% cover;
+  background-position: center top;
   min-height: 3.7em;
   font-size: 1.1em;
   color: #fff;
@@ -530,8 +532,15 @@ footer ul li {
   background-color: #dbdbdb;
 }
 
-
+@media (min-width: 500px) {
+  body {
+    background-size: 165% auto;
+  }
+}
 @media (min-width: 648px) { 
+  body {
+    background-size: 140% auto;
+  }
   .actiekaart {
     padding-left: 7.5em;
   }
@@ -544,10 +553,14 @@ footer ul li {
   }
 }
 
-
+/* bootstrap: small devices */
 @media (min-width: 768px) {
+  body {
+    background-size: 133%;
+  }
+
   .featured {
-    margin: 18em 0 0 0;
+    margin-top: 24em;
   }
   .featured a.nav-link {
     top: 1.9em;
@@ -587,8 +600,11 @@ footer ul li {
   }
 }
 
-
+/* bootstrap: medium devices */
 @media (min-width: 992px) {
+  body {
+    background-size: 100%;
+  }
   .top-picks p {
     width: 62.6%;
   }
@@ -630,7 +646,11 @@ footer ul li {
 }
 
 
+/* bootstrap: large devices */
 @media (min-width: 1200px) {
+  body {
+    background-size: contain;
+  }
   .top-picks p {
     width: 68.6%;
   }
