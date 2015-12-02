@@ -34,9 +34,6 @@
 
     <link rel="stylesheet" href="<?= get_stylesheet_uri(); ?>" />
 
-	<script type="text/javascript" src="/libaries/jquery/jquery.js"></script>
-	<script type="text/javascript" src="/libaries/jquery/mobile.js"></script>
-
     <!--[if lt IE 9]>
     <link rel="stylesheet" media="all" href="<?php bloginfo('template_directory'); ?>/css/ie.css" />
     <script type="text/javascript" src="/libaries/bind.js"></script>

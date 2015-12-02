@@ -17,11 +17,14 @@ get_header();
 				if ($featuredProducts->have_posts()) : ?>
 
 					<section class="featured gallery">
-						<div>
+						<span class="navigate ui icon-left"></span>
+						<span class="navigate ui icon-right"></span>
 
+						<div>
 							<?php while ($featuredProducts->have_posts()) :
 								$featuredProducts->the_post();
 								$product = new WC_Product($featuredProducts->post->ID);  ?>
+
 								<a href="" class="col-md-2">
 									<figure>
 										<?= $product->get_image(); ?>
@@ -30,7 +33,6 @@ get_header();
 								</a>
 
 							<?php endwhile; ?>
-
 						</div>
 					</section>
 

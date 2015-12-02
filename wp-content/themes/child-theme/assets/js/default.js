@@ -2,23 +2,24 @@ $(document).ready(function() {
     // Gallery breedte en movement
     var gallery = $('section.gallery'),
         galleryWrapper = gallery.find('>div'),
-        galleryImages = galleryWrapper.find('a'),
-        maxWidth = galleryImages.outerWidth() * galleryImages.length;
+        galleryImages = galleryWrapper.find('a');
 
     // Breedte is aantal afbeeldingen
-    galleryWrapper.css('width', maxWidth);
+    var imageWidth = galleryImages.outerWidth();
+    galleryWrapper.css('width', (imageWidth*galleryImages.length)+imageWidth);
 
-    // Interval die de galerij laat lopen
-    loopGalery(gallery, galleryWrapper, maxWidth);
-    var galleryInterval = setInterval(function(){ loopGalery(gallery, galleryWrapper, maxWidth)}, 7000);
+    // Navigate to next or prev comic
+    gallery.find('span.navigate').on('click', function() {
+        $(this).hasClass('icon-left') ? featuredGallery('left', imageWidth) : featuredGallery('right', imageWidth);
+    });
 
-    gallery.hover( function () {
-        console.log('stop interval');
+    // Swipe events voor mobiel
+    gallery.on('swipeleft', function() {
+        featuredGallery('right', imageWidth)
+    });
 
-        clearInterval(galleryInterval);
-        galleryWrapper.stop();
-    }, function() { // Herstart de interval
-        galleryInterval = setInterval(function(){ loopGalery(gallery, galleryWrapper, maxWidth)}, 7000);
+    gallery.on('swiperight', function() {
+        featuredGallery('left', imageWidth)
     });
 });
 
@@ -28,18 +29,24 @@ $(window).resize(function() {
 });
 
 
-function loopGalery(parent, wrapper, maxWidth)
-{
-    console.log('start interval');
+function featuredGallery(direction, width) {
+    var gallery = $('section.gallery'),
+        wrapper = gallery.find('>div'),
+        allowNavigate = parseInt(wrapper.css('marginLeft'));
 
-    wrapper.stop(); // stop alle animaties (voor de zekerheid)
-    wrapper.animate({
-        'left': - (maxWidth / parent.outerWidth() * 100 - 100) + '%'
-    }, 4000, function() {
-        setTimeout( function() { // Als de galerij aan het einde is
-            wrapper.animate({
-                'left': '0'
-            }, 500);
-        }, 2000);
-    });
+    if (direction == 'left' && (allowNavigate+width) <= 0) {
+        allowNavigate += width;
+
+        wrapper.stop();
+        wrapper.animate({
+            'marginLeft': allowNavigate
+        });
+    } else if (direction == 'right' && allowNavigate-width >= gallery.outerWidth()-wrapper.outerWidth()) {
+        allowNavigate -= width;
+
+        wrapper.stop();
+        wrapper.animate({
+            'marginLeft': allowNavigate
+        });
+    }
 }
