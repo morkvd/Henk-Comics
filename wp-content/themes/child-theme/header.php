@@ -26,8 +26,10 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>" charset="<?php bloginfo('charset'); ?>" />
 
     <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico" type="image/x-icon" />
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900,900italic,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri(); ?>/assets/css/arrow-icons.css" />
-    <link rel="stylesheet" type="text/css" href="/libaries/uifont/ui-font-solid.css" />
+    <link rel="stylesheet" type="text/css" href="/libaries/fontawesome/font-awesome.min.css" />
 	<link rel="stylesheet" media="screen" href="/libaries/bootstrap/css/grid12.css">
 
     <?php wp_head(); ?>
@@ -43,7 +45,7 @@
     <![endif]-->
 </head>
 
-<body <?php body_class(); ?>>
+<body>
     <noscript>
         <div>
             Deze website werkt niet volledig zonder javascript. <strong>Schakel uw javascript in.</strong>
@@ -58,6 +60,8 @@
                 </object>
             </span>
 	    </a>
+
+        <?php include ('inc/searchform.php'); ?>
 
         <nav class="primary alignright">
             <?php
@@ -75,5 +79,4 @@
 
     <?php do_shortcode('[JRWD_slideshow]'); ?>
 
-    <main>
-	    <div class="container">
+    <main <?php body_class(); ?>>

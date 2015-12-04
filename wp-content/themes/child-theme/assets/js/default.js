@@ -1,4 +1,23 @@
 $(document).ready(function() {
+    // Zoeken in de menu balk
+    var confirmSubmit = false,
+        header = $('header.header');
+
+    $('#searchsubmit').on('click', function(event) {
+        if (!confirmSubmit) event.preventDefault();
+
+        header.toggleClass('equal');
+        $(this).prev().toggle();
+    });
+
+    $('#s').on('keypress', function(event) {
+        if (event.which == 13) {
+            confirmSubmit = true;
+            $(this).parent().submit();
+        }
+    });
+
+
     // Gallery breedte en movement
     var gallery = $('section.gallery'),
         galleryWrapper = gallery.find('>div'),
@@ -10,7 +29,7 @@ $(document).ready(function() {
 
     // Navigate to next or prev comic
     gallery.find('span.navigate').on('click', function() {
-        $(this).hasClass('icon-left') ? featuredGallery('left', imageWidth) : featuredGallery('right', imageWidth);
+        $(this).hasClass('fa-chevron-left') ? featuredGallery('left', imageWidth) : featuredGallery('right', imageWidth);
     });
 
     // Swipe events voor mobiel
@@ -34,6 +53,7 @@ function featuredGallery(direction, width) {
         wrapper = gallery.find('>div'),
         allowNavigate = parseInt(wrapper.css('marginLeft'));
 
+    /* TODO ipv de outerWidth van de gallery berekenen, het aantal items tellen en dan +1 en -1 doen */
     if (direction == 'left' && (allowNavigate+width) <= 0) {
         allowNavigate += width;
 
