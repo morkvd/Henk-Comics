@@ -16,11 +16,22 @@ Version: 1.0
 
 @border: #c1c1c1;
 
+@font-face {
+	font-family: 'badaboom_bbregular';
+	src: url('assets/fonts/badaboombb_reg-webfont.eot');
+	src: url('assets/fonts/badaboombb_reg-webfont.eot?#iefix') format('embedded-opentype'),
+	url('assets/fonts/badaboombb_reg-webfont.woff2') format('woff2'),
+	url('assets/fonts/badaboombb_reg-webfont.woff') format('woff'),
+	url('assets/fonts/badaboombb_reg-webfont.ttf') format('truetype'),
+	url('assets/fonts/badaboombb_reg-webfont.svg#badaboom_bbregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 // Fonts
 body {
 	color: @dark;
-	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
 
 a:link, a:visited, a:active {
@@ -30,13 +41,13 @@ a:link, a:visited, a:active {
 	&:hover { color: @dark;}
 }
 
-h1, h2, h3 { font-family: 'Open Sans', Helvetica, 'sans-serif'; }
+h1, h2, h3 { font-family: 'Source Sans Pro', Helvetica, 'sans-serif'; }
 
-h1 { font-size: 1.8em;}
+h1 { font-size: 1.7rem;}
 
-h2 { font-size: 1.5em;}
+h2 { font-size: 1.5rem;}
 
-h3 { font-size: 1.2em;}
+h3 { font-size: 1.2rem;}
 
 @import (less) '../../../libaries/css/functions.less';
 
@@ -46,23 +57,33 @@ h3 { font-size: 1.2em;}
 .btn {
 	display: inline-block;
 	padding: .8rem 1rem;
-	border: 1px solid @border;
-	font-size: 12pt;
+	font-size: 1rem;
+	background: #000;
 	.transition();
+
+	&:before {
+		width: 100%; height: 100%;
+		margin: -0.5rem 0 0 -0.5rem;
+	}
+
+	&.red {
+		 span { color: @red;}
+		 &:after { background: @red;}
+	 }
+
+	&.yellow {
+		span { color: #F8F62A;}
+		&:after { background: #F8F62A;}
+	}
 
 	span {
 		float: left;
 		.transition();
 
 		&.ui {
-			font-size: 18pt;
-			margin: 1px 0 0 0;
+			font-size: 1.3rem;
+			margin-top: .1rem;
 		}
-	}
-
-	&:hover {
-		color: @light;
-		background: @dark;
 	}
 }
 
@@ -78,12 +99,13 @@ form {
 	input[type='text'],
 	input[type='email'],
 	input[type='password'] {
-		padding: .8rem;
+		padding: 1rem;
 		outline: none;
+		font-size: .9rem;
 		border: 1px solid @border;
-		background: @light;
+		background: #fff;
 
-		&:focus { border: 1px solid @dark; }
+		&:focus { border: 1px solid @red; }
 	}
 
 	input[type='submit'],
@@ -106,11 +128,10 @@ form {
 		}
 	}
 
-	input[type='radio'],
-	input[type='checkbox'] { display: none;}
-
 	input[type='radio']
 	input[type='checkbox'] {
+		display: none;
+
 		+label {
 			cursor: pointer;
 
@@ -143,7 +164,20 @@ form {
 	input[type='radio'] + label span.box { .rounded-corners(50%);}
 }
 
-// Horizontaal line
+form#searchform {
+	input[type='text'] { display: none;}
+
+	button[type='submit'] {
+		padding: .7rem 1rem .8rem 1rem;
+		border: 0;
+		cursor: pointer;
+		font-size: 1.2rem;
+
+		&:hover { background: @red;}
+	}
+}
+
+// Horizontaal line (algemeen)
 hr {
 	width: 100%; height: 2px;
 	float: left;
@@ -151,7 +185,7 @@ hr {
 	background: @border;
 }
 
-// Slideshow
+// Slideshow boven
 section.slider {
 	position: absolute;
 	top: 0; left: 0;
@@ -199,12 +233,12 @@ section.slider {
 	}
 }
 
-// Gallerij
+// Gallerij op de homepage
 section.gallery {
 	position: relative;
 	width: 100%; height: 23em;
 	float: left;
-	margin: 3rem 0;
+	margin: 3rem 0 1rem 0;
 	overflow: hidden;
 
 	&:hover span.navigate { display: block;}
@@ -215,20 +249,14 @@ section.gallery {
 		z-index: 1;
 
 		display: none;
-		padding: .7rem;
+		padding: .8rem 1rem .6rem 1rem;
 		cursor: pointer;
 		color: #fff;
 		font-size: 2rem;
 		background: @red;
 
-		&[class*="left"] {
-			left: 0;
-			padding-left: .6rem;
-		}
-		&[class*="right"] {
-			right: 0;
-			padding-right: .6rem;
-		}
+		&[class*="left"] { left: 0;}
+		&[class*="right"] { right: 0;}
 	}
 
 	div {
@@ -262,7 +290,7 @@ section.gallery {
 
 
 /*----------------------------------------------------- Layout */
-body { background: #f9f9f9;}
+body { background: #dddddd;}
 
 header.header {
 	position: relative;
@@ -270,14 +298,17 @@ header.header {
 
 	width: 100%;
 	float: left;
-	padding: 1rem 2rem;
+	padding: 0 2rem;
 	background: rgba(255,255,255, 0.9);
+	.transition();
 	.drop-shadow();
 
+	&.equal { background: #fff;}
+
 	a.logo {
-		width: 20em;
+		width: 15em;
 		float: left;
-		margin-bottom: -.3rem;
+		margin-top: .6rem;
 
 		span {
 			width: 100%;
@@ -292,18 +323,59 @@ header.header {
 	}
 
 	nav.primary ul {
-		margin-top: .5rem;
+		margin: .1rem 1rem 0 0;
 
 		li {
 			float: left;
-			margin-right: 1rem;
 
 			&:last-child { margin-right: 0;}
 
-			>a {
+			&:hover >a,
+			&.current-menu-item a { color: @red;}
+
+			a {
 				display: block;
-				padding: 1rem;
+				padding: 1.5rem 1rem;
+				font-size: 1.4rem;
+				font-family: "badaboom_bbregular", sans-serif;
 			}
+
+			ul.sub-menu {
+				top: 4.65rem;
+				margin: 0;
+				padding: .3rem 0;
+				background: rgba(255,255,255, 0.9);
+
+				li {
+					width: 100%;
+
+					>a {
+						padding: .5rem 1.2rem;
+						font-size: 1.2rem;
+
+						span.fo {
+							width: 1.4rem;
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	form {
+		position: relative;
+		z-index: 99;
+
+		width: auto;
+		margin-top: .9rem;
+
+		input[type='text'] {
+			position: absolute;
+			left: -51rem;
+
+			width: 50rem;
+			padding: .9rem;
 		}
 	}
 }
@@ -314,15 +386,159 @@ main {
 
 	// Standaard content box
 	section.content {
-		width: 100%;
+		position: relative;
 		float: left;
-		background: #fff;
+
+		header.title {
+			position: absolute;
+			top: -3.3rem; left: 0;
+
+			min-width: 18rem;
+			padding: .6rem 0;
+			text-align: center;
+			background: #000;
+
+			h1 {
+				color: #fff;
+				font-weight: normal;
+
+				b { font-weight: bold;}
+			}
+		}
 	}
 
 
 	/* --- HOMEPAGE --- */
-	section.home {
-		margin-top: 20rem;
+	&.home {
+		padding-top: 25rem;
+
+		// Gallery
+		section.featured {
+			width: 100%;
+			background: #fff;
+		}
+
+
+		// Openingtijden
+		section.openingTime {
+			min-height: 3.7em;
+			color: #fff;
+			font-size: 1.1rem;
+			text-align: center;
+			.cover();
+			background-image: url('assets/images/openingsbar.jpg');
+
+			ul {
+				display: inline-block;
+				padding: 1.3rem 0 1.2rem 0;
+				margin: 0;
+				list-style: none;
+				text-align: center;
+
+				li {
+					float: left;
+					margin: 0 1rem;
+
+					&.today { font-weight: bold; }
+				}
+			}
+		}
+
+
+		// Top picks
+		section.top-picks {
+			position: relative;
+			padding: 1rem;
+			margin: 6rem 0;
+			background: #fff;
+
+			div.img-box img {
+				width: 29.5%;
+				float: left;
+				margin-bottom: .9rem;
+				cursor: pointer;
+
+				&:first-of-type {
+					width: 68.5%;
+					margin-right: 2%;
+				}
+			}
+		}
+
+
+		// Facebook
+		.henks-facebook {
+			position: relative;
+			background-color: #FFF;
+			padding: 0 0 0 1em;
+			margin-bottom: 4em;
+		}
+		.henks-facebook > h1 {
+			padding: .6em 1.5em;
+			position: absolute;
+			top: -2.3em;
+			left: 0;
+		}
+		.henks-facebook > h1 b {
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 900;
+			color: #fff;
+		}
+		.henks-facebook .row {
+			margin: 0;
+		}
+		.henks-facebook .col-xs-6 {
+			padding: 1em;
+		}
+		.henks-facebook .col-xs-6 + .col-xs-6 {
+			padding: 0;
+			overflow: hidden;
+		}
+		.henks-facebook .col-xs-6 + .col-xs-6 img {
+			height: 100%;
+			float: right;
+		}
+		.henks-facebook h2 {
+			font-family: "Source Sans Pro",sans-serif;
+			font-weight: bold;
+			color: #000;
+			margin-top: 0em;
+			font-size: 1.6em;
+			line-height: 105%;
+		}
+		.henks-facebook p {
+			margin-bottom: 1.6em;
+		}
+		.henks-facebook a.nav-link {
+			bottom: auto;
+			right: auto;
+			position: static;
+			display: inline-block;
+			color: #39a2de;
+		}
+		.henks-facebook .date {
+			position: absolute;
+			display: inline-block;
+			right: 2em;
+			bottom: 1em;
+			color: #fff;
+		}
+		.henks-facebook .date-day,
+		.henks-facebook .date-month {
+			font-family: "Source Sans Pro",sans-serif;
+			text-shadow: .1em .1em 1em #000, 0em 0em 1em #000;
+			font-weight: 600;
+			display: block;
+			text-align: right;
+		}
+		.henks-facebook .date-day {
+			font-size: 5em;
+			line-height: .85em;
+		}
+		.henks-facebook .date-month {
+			font-size: 1.3em;
+			line-height: 1em;
+		}
 	}
 }
 
