@@ -77,7 +77,9 @@ $table_prefix  = 'cmswp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+define( 'WP_AUTO_UPDATE_CORE', false );
+
 
 /* That's all, stop editing! Happy blogging. */
 
