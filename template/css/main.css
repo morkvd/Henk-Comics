@@ -21,29 +21,59 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* cuts off images diagonally (put overflow hidden on any parent element to fix part of the triangle sticking out)  */
-.triangle-mask:before {
+/* cuts off images diagonally (put overflow hidden on parent element to fix part of the triangle sticking out)  */
+.hide-overflow {
+  overflow: hidden;
+}
+.triangle-mask-left:before, 
+.triangle-mask-right:before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
   height: 100%;
   width: 10%;
   z-index: 1000;
-  border-width: 22em 4em 0px 0px;
   border-style: solid;
+  bottom: 0;
+}
+.triangle-mask-left:before {
+  border-width: 22em 4em 0 0;
   border-color: #FFF transparent transparent #FFF;
+  left: 0;
+}
+.triangle-mask-right:before {
+  border-width:   0 4em 22em 0;
+  border-color: transparent #FFF transparent;
+  right: 0;
 }
 
 /* menu */
 nav.top-menu {
   background-color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0 2rem;
   box-shadow: 0px 1px 4px 0px rgba(1, 2, 2, 0.2);
+  
 }
+nav.top-menu > a.henk-logo-link {
+  position: relative; 
+  display: inline-block;
+}
+nav.top-menu > a.henk-logo-link:after {
+  height: 2.2em;
+  width: 22em;
+  position: absolute;
+  content: "";
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 4px 4px -2px hsla(180, 50%, 1%, 0.2);
+  left: -1.5em;
+  bottom: -2.2em;
+  border: 0px solid hsl(0, 0%, 100%);
+  border-radius: 0px 0px 4.2em;
+}
+
 nav.top-menu img.henk-logo {
-  height: 3em;
+  height: 4em;
 }
+
 nav.top-menu ul {
   list-style: outside none none;
   margin: 1em 0 0 0;
@@ -651,7 +681,7 @@ section.products-overview hr {
   border-color: hsl(0, 0%, 7%);
 }
 section.products-overview .product {
-  width: 20%;
+  width: 28.9%;
   margin-right: 6.6%;
   margin-bottom: 3em;
   float: left;
@@ -664,7 +694,7 @@ section.products-overview .product p.price {
   margin-bottom: 1em;
   font-weight: bold;
 }
-section.products-overview .product:nth-child(4n+2) {
+section.products-overview .product:nth-child(3n+2) {
   margin-right: 0;
 }
 
@@ -679,13 +709,15 @@ section.products-overview .product input {
 }
 section.products-overview .product a.nav-link {
   position: static;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 1em;
 }
 section.products-overview .product a.nav-link span {
     margin-left: 1em;
 }
 .products-overview .paging {
   font-size: 1.3em;
+  position: absolute;
+  bottom: 0;
 }
 .products-overview .paging a {
   margin: 0px 0.4em;
@@ -843,11 +875,22 @@ section.products-overview .product a.nav-link span {
     width: 100%;
     margin-left: 0;
   }
+  
+  section.products-overview .product {
+    width: 20%;
+  }
+  section.products-overview .product:nth-child(3n+2) {
+    margin-right: 6.6%;
+  }
+  section.products-overview .product:nth-child(4n+2) {
+    margin-right: 0;
+  }
+
 }
 
 
 /* menu bar media query*/
-@media (min-width: 856px) {
+@media (min-width: 900px) {
   nav ul {
     list-style: outside none none;
     display: inline-block;
@@ -856,6 +899,7 @@ section.products-overview .product a.nav-link span {
   }
   nav.top-menu > ul {
     display: inline-block;
+    margin-top: 0;
   }
   nav.top-menu ul li {
     display: inline-block;
