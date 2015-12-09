@@ -11,62 +11,87 @@
 }
 
 
-body {
-  background-image: url(../img/bg.jpg);
-  background-size: contain;
+body.bg-slideshow {
+  background-image: url(../img/bg.jpg);  
   background-repeat: no-repeat; 
-  background-position: 0em 4.2em;
+  background-position: center 4.2em;
+  background-size: 190% auto;
+}
+body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* cuts off images diagonally (put overflow hidden on any parent element to fix part of the triangle sticking out)  */
+.triangle-mask:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 10%;
+  z-index: 1000;
+  border-width: 22em 4em 0px 0px;
+  border-style: solid;
+  border-color: #FFF transparent transparent #FFF;
+}
+
 /* menu */
-nav {
+nav.top-menu {
   background-color: #fff;
   padding: 1rem 2rem;
   box-shadow: 0px 1px 4px 0px rgba(1, 2, 2, 0.2);
 }
-nav img.henk-logo {
+nav.top-menu img.henk-logo {
   height: 3em;
 }
-nav ul {
+nav.top-menu ul {
   list-style: outside none none;
   margin: 1em 0 0 0;
   padding: 0;
+}
+nav.top-menu ul {
   display: none; /* closed on mobile */
 }
-nav ul.open {
+nav.top-menu ul.open {
   display: block;/* open the hamburger menu */
 }
-nav ul li {
+nav.top-menu ul li {
   padding: .8em;
   text-align: center;
   border-top: solid 1px #bbb;
 }
-nav ul li a {
+nav.top-menu ul li a {
   font-family: "badaboom_bbregular",sans-serif;
   color: #000;
   font-size: 1.3em;
 }
-nav ul li ul li:first-child {
+nav.top-menu ul li ul li:first-child {
   border-top: none;
 }
-nav a span.caret {
+nav.top-menu a span.caret {
   margin-left: .3em;
 }
-nav .droppeddown {
+nav.top-menu .droppeddown {
   display: block;
   position: static;
   float: none;
 }
-nav .hamburger {
+nav.top-menu .hamburger {
   font-family: "badaboom_bbregular",sans-serif;
   color: #000;
   font-size: 2em;
   float: right;
 }
-nav .hamburger span.fa {
+nav.top-menu .hamburger span.fa {
   margin-left: .2em;
 }
+
+
+/* the first section after the menu has a large margin-top to make room for the slider */
+body.bg-slideshow nav + div.container > .row > section {
+   margin-top: 18em;
+}
+
 
 /* Title block */
 section h1 {
@@ -104,11 +129,11 @@ a.nav-link span {
 /* new products */
 .featured {
   height: 34em;
-  margin: 18em 0 2em 0;
+  margin-bottom: 2em;
   position: relative;
   overflow: hidden;
   padding: 0px;
-  background: transparent;idden;
+  background: transparent;
   padding: 0;
 }
 .featured div {
@@ -159,7 +184,8 @@ a.nav-link span {
 .openingTime {
   background-image: url(../img/openingsbar.jpg);
   background-repeat: repeat-y; 
-  background-size: cover;
+  background-size: 175% cover;
+  background-position: center top;
   min-height: 3.7em;
   font-size: 1.1em;
   color: #fff;
@@ -236,7 +262,7 @@ a.nav-link span {
 .henks-facebook {
   position: relative;
   background-color: #FFF;
-  padding: 0 0 0 1em;
+  padding: 0;
   margin-bottom: 4em; 
 }
 .henks-facebook > h1 {
@@ -258,11 +284,13 @@ a.nav-link span {
 }
 .henks-facebook .col-xs-6 + .col-xs-6 {
   padding: 0;
-  overflow: hidden;
+  position: relative;
+  overflow: hidden; /* hides the overflowing triangle that cutsoff the photo */
 }
+
 .henks-facebook .col-xs-6 + .col-xs-6 img {
-  height: 100%;
-  float: right;
+  width: 100%;
+  position: relative;
 }
 .henks-facebook h2 {
   font-family: "Source Sans Pro",sans-serif;
@@ -531,7 +559,153 @@ footer ul li {
 }
 
 
+
+/* * *               *
+ * products-overview *
+ *               * * */
+
+.products-page {
+  margin-top: 4em;
+}
+
+section.product-menu h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.3em;
+  background-color: hsl(360, 78%, 54%);
+  text-align: center;
+  padding: 0.4em;
+  font-weight: bold;
+  margin: 0;
+  margin-right: 14%;
+}
+.product-menu .cart {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2em;
+}
+.product-menu .cart-img {
+  width: 4em;
+}
+.product-menu .amount-in-cart {
+  position: absolute;
+  top: -0.3em;
+  right: -0.7em;
+  background-color: hsl(360, 78%, 54%);
+  border: 0px solid transparent;
+  border-radius: 3em;
+  width: 2.2em;
+  height: 2.2em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  line-height: 2.1em;
+  font-size: 0.9em;
+}
+section.product-menu nav {
+  padding-left: 33%;
+  background-color: hsl(0, 0%, 92%);
+  padding-top: 4em;
+  padding-bottom: 4em;
+  margin-right: 14%;
+}
+section.product-menu nav ul {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+section.product-menu nav ul li {
+  display: block;
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+  margin-right: 2em;
+  margin-bottom: 1em;
+}
+section.product-menu nav ul li a {
+  font-family: "Source Sans Pro",sans-serif;
+  padding: 1em 0px;
+  display: block;
+  color: hsl(0, 0%, 0%);
+}
+section.product-menu nav ul li.acive a {
+  color: hsl(0, 78%, 54%);
+  font-weight: bold;
+}
+section.product-menu nav ul li a span {
+  float: right;
+}
+section.product-menu .ideal {
+  width: 45%;
+}
+section.product-menu .paypal {
+  width: 55%;
+}
+
+section.products-overview h1 {
+  background-color: transparent;
+  color: #000;
+  padding: 0;
+}
+section.products-overview .sort-menu {
+  float: right;
+}
+section.products-overview hr {
+  margin: 0;
+  border-color: hsl(0, 0%, 7%);
+}
+section.products-overview .product {
+  width: 20%;
+  margin-right: 6.6%;
+  margin-bottom: 3em;
+  float: left;
+  margin-top: 2em;
+}
+section.products-overview .product p {
+  margin: 0;
+}
+section.products-overview .product p.price {
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+section.products-overview .product:nth-child(4n+2) {
+  margin-right: 0;
+}
+
+section.products-overview .product img {
+  width: 100%;
+}
+section.products-overview .product input {
+  width: 2.2em;
+  text-align: center;
+  height: 2.2em;
+  margin-right: 0.4em;
+}
+section.products-overview .product a.nav-link {
+  position: static;
+  padding: 0.6em 1.2em;
+}
+section.products-overview .product a.nav-link span {
+    margin-left: 1em;
+}
+.products-overview .paging {
+  font-size: 1.3em;
+}
+.products-overview .paging a {
+  margin: 0px 0.4em;
+}
+
+
+
+
+@media (min-width: 500px) {
+  /* tweaking size of sideshow */
+  body.bg-slideshow {
+    background-size: 165% auto;
+  }
+}
 @media (min-width: 648px) { 
+  /* tweaking size of sideshow */
+  body.bg-slideshow {
+    background-size: 140% auto;
+  }
+
   .actiekaart {
     padding-left: 7.5em;
   }
@@ -539,16 +713,26 @@ footer ul li {
     font-size: 4.8em;
   }
 
+  
+  .henks-facebook {
+    padding: 0px 0px 0px 1em;
+  }
+
   .ask-henk {
     margin: 10em 6em 4em;
   }
 }
 
-
+/* bootstrap: small devices */
 @media (min-width: 768px) {
-  .featured {
-    margin: 18em 0 0 0;
+  body.bg-slideshow {
+    background-size: 133%;
   }
+
+  body.bg-slideshow nav + div.container > .row > section {
+     margin-top: 24em;
+  }
+  
   .featured a.nav-link {
     top: 1.9em;
     right: 2.3em;
@@ -587,8 +771,11 @@ footer ul li {
   }
 }
 
-
+/* bootstrap: medium devices */
 @media (min-width: 992px) {
+  body.bg-slideshow {
+    background-size: 100%;
+  }
   .top-picks p {
     width: 62.6%;
   }
@@ -603,9 +790,16 @@ footer ul li {
   .actiekaart img {
     width: 10em;
   }
-
   .actiekaart {
     padding-left: 3em;
+  }
+
+  .henks-facebook .col-xs-6 + .col-xs-6 {
+    overflow: hidden;
+  }
+  .henks-facebook .col-xs-6 + .col-xs-6 img {
+    width: 118%;
+    margin-left: -1em;
   }
 
   .ask-henk {
@@ -619,7 +813,6 @@ footer ul li {
   .event .event-textcontainer .row + .row .col-md-5:last-child {
       padding-left: 4em;
   }
-  
   .event {
     padding-bottom: 3em;
   }
@@ -630,7 +823,11 @@ footer ul li {
 }
 
 
+/* bootstrap: large devices */
 @media (min-width: 1200px) {
+  body.bg-slideshow {
+    background-size: contain;
+  }
   .top-picks p {
     width: 68.6%;
   }
@@ -640,6 +837,11 @@ footer ul li {
   }
   .actiekaart img {
     width: 16em;
+  }
+
+  .henks-facebook .col-xs-6 + .col-xs-6 img {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -652,24 +854,27 @@ footer ul li {
     float: right;
     margin: 0;
   }
-  nav ul li {
+  nav.top-menu > ul {
+    display: inline-block;
+  }
+  nav.top-menu ul li {
     display: inline-block;
     padding: .8em;
     text-align: left;
     border: none;
   }
-  nav ul li a {
+  nav.top-menu ul li a {
     font-family: "badaboom_bbregular",sans-serif;
     color: #000;
     font-size: 1.3em;
   }
-  nav a span.caret {
+  nav.top-menu a span.caret {
     margin-left: .3em;
   }
-  nav .dropdown {
+  nav.dropdown {
     display: inline-block;
   }
-  nav .hamburger {
+  nav.top-menu .hamburger {
     display: none;
   }
 }
