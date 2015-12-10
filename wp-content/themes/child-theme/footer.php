@@ -2,7 +2,7 @@
 
     <footer class="footer">
         <ul>
-            <li>&#169; 2011 &ndash; 2015 Comics B.V.</li>
+            <li>&#169; 2011 &ndash; <?= date('Y'); ?> Comics B.V.</li>
             <li>Geldersekade 96, 1012 BM Amsterdam</li>
             <li>Tel: (020) 4213688</li>
             <li>E&ndash;mail: henk@comics.nl</li>

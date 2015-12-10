@@ -53,7 +53,6 @@ h3 {
 /*----------------------------------------------------- Objects */
 .btn {
   position: relative;
-  z-index: 1;
   display: inline-block;
   padding: .8rem 1rem;
   font-size: 1rem;
@@ -98,8 +97,11 @@ h3 {
   transition: all 0.2s linear;
 }
 .btn span.fa {
-  font-size: 1rem;
+  font-size: .9rem;
   margin: .3rem 0 0 .3rem;
+}
+.btn:hover span.fa {
+  margin-left: .5rem;
 }
 form {
   width: 100%;
@@ -405,13 +407,15 @@ main {
 }
 main section.content {
   position: relative;
+  z-index: 1;
   float: left;
+  padding: 1rem;
 }
 main section.content header.title {
   position: absolute;
   top: -3.3rem;
   left: 0;
-  min-width: 18rem;
+  min-width: 19rem;
   padding: .6rem 0;
   text-align: center;
   background: #000;
@@ -428,6 +432,7 @@ main.home {
 }
 main.home section.featured {
   width: 100%;
+  padding: 0;
   background: #fff;
 }
 main.home section.openingTime {
@@ -460,10 +465,7 @@ main.home section.openingTime ul li.today {
   font-weight: bold;
 }
 main.home section.top-picks {
-  position: relative;
-  float: left;
-  padding: 1rem;
-  margin: 6rem 0;
+  margin: 5rem 0;
   background: #fff;
 }
 main.home section.top-picks div.img-box img {
@@ -484,15 +486,11 @@ main.home section.top-picks a.btn {
   margin: .8rem .6rem 0 0;
 }
 main.home section.henks-facebook {
-  position: relative;
-  float: left;
-  padding: 0;
   margin-bottom: 4rem;
   background: #fff;
 }
 main.home section.henks-facebook div.txt {
   float: left;
-  padding: 1rem;
 }
 main.home section.henks-facebook div.txt h2 {
   margin-bottom: .5rem;
@@ -559,29 +557,27 @@ main.home section.location div#map {
   height: 23em;
 }
 aside.sidebar {
-  margin-top: 2.5rem;
   padding-left: 2rem;
 }
 aside.sidebar > section {
   float: left;
   margin-bottom: 2rem;
 }
-aside.sidebar section.actiekaart h1 {
-  font-size: 3.8rem;
-  margin-bottom: .5rem;
-  color: #ed1c24;
-  text-shadow: 2px 5px 0px #000000;
+aside.sidebar section.actiekaart {
+  margin-top: 6rem;
+  padding: 1rem;
+  background: #fff;
 }
 aside.sidebar section.actiekaart img,
 aside.sidebar section.actiekaart div.txt {
   float: left;
-  margin: 0;
 }
 aside.sidebar section.actiekaart img {
-  padding-left: 0;
+  margin-top: 1rem;
 }
-aside.sidebar section.actiekaart div.txt {
-  padding-right: 0;
+aside.sidebar section.actiekaart a.btn {
+  float: right;
+  margin: 3rem 1rem 0 0;
 }
 aside.sidebar section.ask-henk {
   margin-top: 6rem;
@@ -693,11 +689,18 @@ footer.footer ul li {
 }
 /*----------------------------------------------------- Media Queries */
 @media (max-width: 1200px) {
-  aside.sidebar section.actiekaart h1 {
-    font-size: 3.1rem;
+  header.header a.logo {
+    width: 13.5em;
+  }
+  header.header nav.primary ul li a {
+    font-size: 1.3rem;
+    padding: 1.5rem .7rem;
   }
   main.home section.top-picks a.btn {
     margin-right: .1rem;
+  }
+  aside.sidebar section.actiekaart a.btn {
+    margin-right: 0;
   }
 }
 @media (max-width: 991px) {
@@ -795,11 +798,9 @@ footer.footer ul li {
     margin: 0;
     padding: 0 1rem;
   }
-  aside.sidebar section.actiekaart img {
-    padding: 0;
-  }
-  aside.sidebar section.actiekaart div.txt {
-    padding-left: 1.5rem;
+  aside.sidebar section.actiekaart a.btn {
+    float: left;
+    margin: -8rem 0 0 1rem;
   }
   aside.sidebar section.ask-henk div.innerbox {
     padding: 4rem 2rem 2.8rem 2rem;
@@ -840,6 +841,12 @@ footer.footer ul li {
   main.home section.top-picks a.btn {
     float: left;
   }
+  main.home section.henks-facebook {
+    padding: 0;
+  }
+  main.home section.henks-facebook div.txt {
+    padding: 1rem;
+  }
   main.home section.henks-facebook figure.image {
     position: static;
     height: 8em;
@@ -859,15 +866,13 @@ footer.footer ul li {
   aside.sidebar section.actiekaart {
     text-align: center;
   }
-  aside.sidebar section.actiekaart h1 {
-    font-size: 3.1rem;
-  }
   aside.sidebar section.actiekaart img {
-    margin: .8rem 0;
-    padding: 0 3rem;
+    margin: 1rem 0;
+    padding: 0 10rem;
   }
-  aside.sidebar section.actiekaart div.txt {
-    padding: 0 1.5rem;
+  aside.sidebar section.actiekaart a.btn {
+    float: none;
+    margin: 0;
   }
   aside.sidebar section.ask-henk div.innerbox {
     padding: 4rem 1rem 1.8rem 1rem;
@@ -882,8 +887,16 @@ footer.footer ul li {
     margin: .4rem 0;
   }
 }
+@media (max-width: 650px) {
+  aside.sidebar section.actiekaart img {
+    padding: 0 6rem;
+  }
+}
 @media (max-width: 460px) {
   /* --- SIDEBAR --- */
+  aside.sidebar section.actiekaart img {
+    padding: 0 4rem;
+  }
   aside.sidebar section.ask-henk div.innerbox > img {
     width: 75%;
   }
