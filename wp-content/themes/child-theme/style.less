@@ -60,8 +60,6 @@ h3 { font-size: 1.2rem;}
 // Buttons
 .btn {
 	position: relative;
-	z-index: 1;
-
 	display: inline-block;
 	padding: .8rem 1rem;
 	font-size: 1rem;
@@ -95,10 +93,12 @@ h3 { font-size: 1.2rem;}
 		.transition();
 
 		&.fa {
-			font-size: 1rem;
+			font-size: .9rem;
 			margin: .3rem 0 0 .3rem;
 		}
 	}
+
+	&:hover span.fa { margin-left: .5rem;}
 }
 
 // Formulieren
@@ -411,13 +411,15 @@ main {
 	// Standaard content box
 	section.content {
 		position: relative;
+		z-index: 1;
 		float: left;
+		padding: 1rem;
 
 		header.title {
 			position: absolute;
 			top: -3.3rem; left: 0;
 
-			min-width: 18rem;
+			min-width: 19rem;
 			padding: .6rem 0;
 			text-align: center;
 			background: #000;
@@ -439,6 +441,7 @@ main {
 		// Gallery
 		section.featured {
 			width: 100%;
+			padding: 0;
 			background: #fff;
 		}
 
@@ -471,10 +474,7 @@ main {
 
 		// Top picks
 		section.top-picks {
-			position: relative;
-			float: left;
-			padding: 1rem;
-			margin: 6rem 0;
+			margin: 5rem 0;
 			background: #fff;
 
 			div.img-box img {
@@ -500,15 +500,12 @@ main {
 
 		// Facebook
 		section.henks-facebook {
-			position: relative;
-			float: left;
-			padding: 0;
 			margin-bottom: 4rem;
 			background: #fff;
 
 			div.txt {
 				float: left;
-				padding: 1rem;
+				//padding: 1rem;
 
 				h2 { margin-bottom: .5rem;}
 			}
@@ -578,7 +575,6 @@ main {
 }
 
 aside.sidebar {
-	margin-top: 2.5rem;
 	padding-left: 2rem;
 
 	>section {
@@ -587,21 +583,19 @@ aside.sidebar {
 	}
 
 	section.actiekaart {
-		h1 {
-			font-size: 3.8rem;
-			margin-bottom: .5rem;
-			color: @red;
-			.text-shadow(2px 5px 0px #000);
-		}
+		margin-top: 6rem;
+		padding: 1rem;
+		background: #fff;
 
 		img,
-		div.txt {
-			float: left;
-			margin: 0;
-		}
+		div.txt { float: left; }
 
-		img { padding-left: 0;}
-		div.txt { padding-right: 0;}
+		img { margin-top: 1rem;}
+
+		a.btn {
+			float: right;
+			margin: 3rem 1rem 0 0;
+		}
 	}
 
 	section.ask-henk {
@@ -731,8 +725,16 @@ footer.footer {
 /*----------------------------------------------------- Media Queries */
 @media (max-width: 1200px) {
 	// Snelle fixes voor spacing problemen
-	aside.sidebar section.actiekaart h1 { font-size: 3.1rem;}
+	header.header {
+		a.logo { width: 13.5em;}
+		nav.primary ul li a {
+			font-size: 1.3rem;
+			padding: 1.5rem .7rem;
+		}
+	}
+
 	main.home section.top-picks a.btn { margin-right: .1rem; }
+	aside.sidebar section.actiekaart a.btn { margin-right: 0;}
 }
 
 @media (max-width: 991px) {
@@ -835,9 +837,9 @@ footer.footer {
 
 
 		// Actiekaart
-		section.actiekaart {
-			img { padding: 0;}
-			div.txt { padding-left: 1.5rem;}
+		section.actiekaart a.btn {
+			float: left;
+			margin: -8rem 0 0 1rem;
 		}
 
 
@@ -889,10 +891,16 @@ footer.footer {
 
 
 		// Facebook
-		section.henks-facebook figure.image {
-			position: static;
-			height: 8em;
-			float: left;
+		section.henks-facebook {
+			padding: 0;
+
+			div.txt { padding: 1rem;}
+
+			figure.image {
+				position: static;
+				height: 8em;
+				float: left;
+			}
 		}
 
 
@@ -917,14 +925,15 @@ footer.footer {
 		section.actiekaart {
 			text-align: center;
 
-			h1 { font-size: 3.1rem; }
-
 			img {
-				margin: .8rem 0;
-				padding: 0 3rem;
+				margin: 1rem 0;
+				padding: 0 10rem;
 			}
 
-			div.txt { padding: 0 1.5rem;}
+			a.btn {
+				float: none;
+				margin: 0;
+			}
 		}
 
 
@@ -947,9 +956,16 @@ footer.footer {
 	}
 }
 
+@media (max-width: 650px) {
+	aside.sidebar section.actiekaart img { padding: 0 6rem;}
+}
+
 @media (max-width: 460px) {
 	/* --- SIDEBAR --- */
-	aside.sidebar section.ask-henk div.innerbox >img { width: 75%;}
+	aside.sidebar {
+		section.actiekaart img { padding: 0 4rem;}
+		section.ask-henk div.innerbox >img { width: 75%;}
+	}
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {

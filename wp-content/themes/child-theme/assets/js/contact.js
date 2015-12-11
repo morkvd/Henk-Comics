@@ -10,7 +10,9 @@ function addMap(adress)
         zoom: 17,
         streetViewControl: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: false
+        mapTypeControl: false,
+        draggable: false,
+        scrollwheel: false
     };
 
     var map = new google.maps.Map(document.getElementById('map'), mapOptions),

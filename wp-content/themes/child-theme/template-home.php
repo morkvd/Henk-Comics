@@ -63,7 +63,7 @@ get_header();
 
 			<div class="container">
 				<section class="content alignleft col-md-7">
-					<section class="top-picks">
+					<section class="top-picks content">
 						<header class="title">
 							<h1><b>Top</b> picks of the week</h1>
 						</header>
@@ -85,7 +85,7 @@ get_header();
 						</a>
 					</section>
 
-					<section class="henks-facebook">
+					<section class="henks-facebook content">
 						<header class="title">
 							<h1><b>Henk's</b> facebook</h1>
 						</header>
@@ -109,48 +109,7 @@ get_header();
 					</section>
 				</section>
 
-				<aside class="sidebar col-md-5 col-xs-12 alignright">
-					<section class="actiekaart">
-						<h1 class="bboom">Henks actiekaart</h1>
-
-						<img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/pasje.png" class="col-md-6 col-sm-4 col-xs-12" alt="">
-
-						<div class="txt col-md-6 col-sm-8 col-xs-12">
-							<p>Order now and experience the advantages of the Henk Actiekaart!</p>
-
-							<a href="" class="btn red">
-								<span>Order now</span>
-								<span class="fa fa-arrow-circle-right"></span>
-							</a>
-						</div>
-					</section>
-
-					<section class="ask-henk">
-						<div class="innerbox">
-							<img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/ask-henk.png" alt="Ask Henk">
-
-							<section class="conversation">
-								<p class="question">Hey henk, komt de nieuwe Flash deze week binnen?</p>
-								<p class="answer">Yes! Maandag!</p>
-								<p class="question">Hey henk, komt de nieuwe Flash deze week binnen?</p>
-								<p class="answer">Yes! Maandag!</p>
-								<p class="question">Hey henk, komt de nieuwe Flash deze week binnen?</p>
-								<p class="answer">Yes! Maandag!</p>
-								<p class="question">Hey henk, komt de nieuwe Flash deze week binnen?</p>
-								<p class="answer">Yes! Maandag!</p>
-							</section>
-
-							<form action="" method="POST">
-								<label for="question">Ask us anything here:</label>
-								<input type="text" name="question" id="question" />
-
-								<button type="submit" name="ask-question">
-									send
-								</button>
-							</form>
-						</div>
-					</section>
-				</aside>
+				<?php get_sidebar(); ?>
 			</div>
 
 			<section class="location">
