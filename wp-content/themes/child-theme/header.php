@@ -75,6 +75,8 @@
             wp_nav_menu($primary);
             ?>
         </nav>
+
+        <span class="fa fa-bars toggle-mobile alignright"></span>
     </header>
 
     <?php do_shortcode('[JRWD_slideshow]'); ?>

@@ -22,18 +22,19 @@ get_header();
 					if ($featuredProducts->have_posts()) : ?>
 
 						<section class="gallery">
-							<span class="navigate fa fa-chevron-left"></span>
-							<span class="navigate fa fa-chevron-right"></span>
+							<span class="navigate prev fa fa-chevron-left"></span>
+							<span class="navigate next fa fa-chevron-right"></span>
 
 							<div>
 								<?php while ($featuredProducts->have_posts()) :
 									$featuredProducts->the_post();
 									$product = new WC_Product($featuredProducts->post->ID);  ?>
 
-									<a href="" class="col-md-2">
+									<a href="" class="item col-md-2">
 										<figure>
 											<?= $product->get_image(); ?>
 										</figure>
+
 										<h1><?= $product->post->post_title; ?></h1>
 									</a>
 
@@ -73,7 +74,7 @@ get_header();
 							<img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/top-picks_comic.jpg" alt="">
 						</div>
 
-						<div class="txt alignleft">
+						<div class="txt col-xs-8 alignleft">
 							<h2>Scott Pilgrim VS the world</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.</p>
 						</div>
@@ -84,34 +85,82 @@ get_header();
 						</a>
 					</section>
 
-					<!-- henks facebook 2 -->
 					<section class="henks-facebook">
 						<header class="title">
 							<h1><b>Henk's</b> facebook</h1>
 						</header>
 
-						<div class="row">
-							<div class="col-xs-6">
-								<h2>Henks 20th anniversary weekend</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt magnam laboriosam harum a dolor, quod eius maiores necessitatibus? dipisicing elit. Deserunt magnam laboriosam harum a dolor,</p>
-								<a href="" class="nav-link">Bekijk op facebook <span class="fa fa-arrow-circle-right"></span></a>
-							</div>
-							<div class="col-xs-6">
-								<img src="img/facebook-image.png" alt="">
-								<div class="date">
-									<span class="date-day">09</span>
-									<span class="date-month">november</span>
-								</div>
-							</div>
+						<div class="txt col-md-7 col-sm-8 col-xs-12">
+							<h2>Henks 20th anniversary weekend</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt magnam laboriosam harum a dolor, quod eius maiores necessitatibus? dipisicing elit. Deserunt magnam laboriosam harum a dolor,</p>
 
-
+							<a href="" class="btn blue">
+								<span>Bekijk op facebook</span>
+								<span class="fa fa-arrow-circle-right"></span>
+							</a>
 						</div>
+
+						<figure class="image col-md-5 col-sm-4 col-xs-12" style="background-image: url('http://www.keenthemes.com/preview/metronic/theme/assets/global/plugins/jcrop/demos/demo_files/image1.jpg');">
+							<div class="date">
+								<span class="date-day">09</span>
+								<span class="date-month">november</span>
+							</div>
+						</figure>
 					</section>
 				</section>
 
+				<aside class="sidebar col-md-5 col-xs-12 alignright">
+					<section class="actiekaart">
+						<h1 class="bboom">Henks actiekaart</h1>
 
+						<img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/pasje.png" class="col-md-6 col-sm-4 col-xs-12" alt="">
 
+						<div class="txt col-md-6 col-sm-8 col-xs-12">
+							<p>Order now and experience the advantages of the Henk Actiekaart!</p>
+
+							<a href="" class="btn red">
+								<span>Order now</span>
+								<span class="fa fa-arrow-circle-right"></span>
+							</a>
+						</div>
+					</section>
+
+					<section class="ask-henk">
+						<div class="innerbox">
+							<img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/ask-henk.png" alt="Ask Henk">
+
+							<section class="conversation">
+								<p class="question">Hey henk, komt de nieuwe Flash deze week binnen?</p>
+								<p class="answer">Yes! Maandag!</p>
+								<p class="question">Hey henk, komt de nieuwe Flash deze week binnen?</p>
+								<p class="answer">Yes! Maandag!</p>
+								<p class="question">Hey henk, komt de nieuwe Flash deze week binnen?</p>
+								<p class="answer">Yes! Maandag!</p>
+								<p class="question">Hey henk, komt de nieuwe Flash deze week binnen?</p>
+								<p class="answer">Yes! Maandag!</p>
+							</section>
+
+							<form action="" method="POST">
+								<label for="question">Ask us anything here:</label>
+								<input type="text" name="question" id="question" />
+
+								<button type="submit" name="ask-question">
+									send
+								</button>
+							</form>
+						</div>
+					</section>
+				</aside>
 			</div>
+
+			<section class="location">
+				<h1>
+					<span>Locatie</span>
+					<span class="fa fa-chevron-down"></span>
+				</h1>
+
+				<div id="map"></div>
+			</section>
 
 		<?php endwhile;
 	endif;
