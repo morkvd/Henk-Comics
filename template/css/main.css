@@ -41,7 +41,7 @@ body {
   left: 0;
 }
 .triangle-mask-right:before {
-  border-width:   0 4em 22em 0;
+  border-width: 0 4em 22em 0;
   border-color: transparent #FFF transparent;
   right: 0;
 }
@@ -51,7 +51,6 @@ nav.top-menu {
   background-color: #fff;
   padding: 1rem 2rem 0 2rem;
   box-shadow: 0px 1px 4px 0px rgba(1, 2, 2, 0.2);
-  
 }
 nav.top-menu > a.henk-logo-link {
   position: relative; 
@@ -137,6 +136,18 @@ section > h1 b {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 900;
   color: #fff;
+}
+section h1.centered-red {
+  font-family: "Source Sans Pro",sans-serif;
+  font-size: 1.8em;
+  background-color: hsl(358, 85%, 52%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.5em 1.6em;
+  display: block;
+  width: 11em;
+  text-align: center;
+  font-weight: 700;
+  margin: -3.2em auto 0;
 }
 
 /* standard link button thingy */
@@ -722,6 +733,22 @@ section.products-overview .product a.nav-link span {
 .products-overview .paging a {
   margin: 0px 0.4em;
 }
+
+
+/* * *                                   *
+ * regular-page: contact / team / events *
+ *                                   * * */
+.regular-page {
+  background-color: #fff;
+  padding: 2em; 
+}
+.regular-page h2 {
+
+}
+.contact-page p {
+  margin: 0;
+}
+
 
 
 
