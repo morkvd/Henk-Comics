@@ -37,11 +37,13 @@ body {
 }
 .triangle-mask-left:before {
   border-width: 22em 4em 0 0;
+  border-width: 30em 5em 0 0;
   border-color: #FFF transparent transparent #FFF;
   left: 0;
 }
 .triangle-mask-right:before {
   border-width: 0 4em 22em 0;
+  border-width: 0 5em 30em 0;
   border-color: transparent #FFF transparent;
   right: 0;
 }
@@ -147,7 +149,7 @@ section h1.centered-red {
   width: 11em;
   text-align: center;
   font-weight: 700;
-  margin: -3.2em auto 0;
+  margin: -3.201em auto 0;
 }
 
 /* standard link button thingy */
@@ -742,11 +744,78 @@ section.products-overview .product a.nav-link span {
   background-color: #fff;
   padding: 2em; 
 }
+/* grey blocks*/
+.regular-page > section {
+  background-color: #dbdbdb;
+  margin-top: 2em;
+  overflow: hidden;
+}
 .regular-page h2 {
+  font-family: "badaboom_bbregular",sans-serif;
+  color: #000;
+  font-size: 2.2em;
 
 }
-.contact-page p {
+
+/* triangle masks for inside gray blocks */
+.regular-page .triangle-mask-left:before {
+  border-color: #dbdbdb transparent transparent #dbdbdb;
+}
+.regular-page .triangle-mask-right:before {
+  border-color: transparent #dbdbdb transparent;
+}
+.regular-page .triangle-mask-left:before img,
+.regular-page .triangle-mask-right:before img {
   margin: 0;
+  padding: 0;
+}
+
+/* inside of block with cutoff photo */
+.regular-page .row {
+  margin: 0;
+  position: relative;
+}
+.regular-page .col-sm-5 {
+  margin: 0;
+}
+.regular-page .col-sm-5:last-child {
+  float: right;
+  text-align: right;
+}
+.regular-page .col-sm-7.cutoff-img {
+  padding: 0;
+  position: absolute;
+  overflow: hidden; /* hides the overflowing triangle that cutsoff the photo */
+  height: 100%;
+  left: 0;
+}
+.regular-page .col-sm-5 + .col-sm-7.cutoff-img {  
+  left: unset;
+  right: 0;
+}
+
+/* contact page specific */
+.regular-page .row p {
+  margin: 0;
+}
+.regular-page .row p:last-child {
+  margin-bottom: 2em;
+}
+/* add images to the cutoff boxes */
+.regular-page section.maps-placeholder {
+  background: transparent none no-repeat scroll center center / cover;
+  background-image: url("../img/maps-placeholder.jpg");
+}
+
+/* contact form */
+.regular-page form {
+  margin-bottom: 1em;
+}
+.regular-page label, 
+.regular-page input,
+.regular-page textarea {
+  display: block;
+  width: 95%;
 }
 
 
