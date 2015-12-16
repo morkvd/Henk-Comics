@@ -34,6 +34,12 @@ $(document).ready(function() {
     });
 
 
+    /** ----- SORTING ----- **/
+    $('select.sorting').on('change', function() {
+        window.location = '/store?orderby=' + $(this).val();
+    });
+
+
     /** ----- GALLERY (NIEUWE ITEMS) ----- **/
     var gallery = $('section.gallery'),
         galleryWrapper = gallery.find('>div'),

@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0605bb62-62cc-40e2-a2a9-92c99076b240" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/sidebar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/assets/images/cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/assets/images/cart_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/inc/product-sorting.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/content-single-product.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/loop/add-to-cart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/loop/orderby.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/contact.js" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/contact.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/child-theme/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/basic-theme/inc/walkers/PrimaryArrowWalker.php" afterPath="$PROJECT_DIR$/wp-content/themes/basic-theme/inc/walkers/PrimaryArrowWalker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/child-theme/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/child-theme/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/child-theme/style.less" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/style.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/child-theme/template-home.php" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/template-home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/archive-product.php" afterPath="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/archive-product.php" />
     </list>
     <ignored path="Henk-Comics.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,55 +37,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/sidebar.php">
+      <file leaf-file-name="template-home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/template-home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.153846">
-              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state vertical-scroll-proportion="-44.76923">
+              <caret line="82" column="57" selection-start-line="82" selection-start-column="57" selection-end-line="83" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="archive-product.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/archive-product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.230769">
+              <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product-sorting.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/inc/product-sorting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41555557">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2751408">
-              <caret line="426" column="16" selection-start-line="426" selection-start-column="16" selection-end-line="426" selection-end-column="16" />
+            <state vertical-scroll-proportion="-9.307693">
+              <caret line="303" column="13" selection-start-line="303" selection-start-column="13" selection-end-line="303" selection-end-column="13" />
               <folding>
-                <element signature="e#2169#3401#0" expanded="false" />
-                <element signature="e#3419#3608#0" expanded="false" />
-                <element signature="e#3644#3722#0" expanded="false" />
-                <element signature="e#3758#4327#0" expanded="false" />
-                <element signature="e#4372#5124#0" expanded="false" />
-                <element signature="e#5239#6578#0" expanded="false" />
-                <element signature="e#5627#6213#0" expanded="false" />
-                <element signature="e#6232#6415#0" expanded="false" />
-                <element signature="e#7173#7579#0" expanded="false" />
-                <element signature="e#7617#7943#0" expanded="false" />
-                <element signature="e#7985#8662#0" expanded="false" />
-                <element signature="e#8711#9127#0" expanded="false" />
-                <element signature="e#9448#11131#0" expanded="false" />
-                <element signature="e#11149#11318#0" expanded="false" />
-                <element signature="e#11793#13058#0" expanded="false" />
-                <element signature="e#13096#13249#0" expanded="false" />
-                <element signature="e#13605#13657#0" expanded="false" />
-                <element signature="e#13852#14115#0" expanded="false" />
-                <element signature="e#14326#14419#0" expanded="false" />
-                <element signature="e#14463#14806#0" expanded="false" />
-                <element signature="e#14713#14803#0" expanded="false" />
-                <element signature="e#14852#14890#0" expanded="false" />
+                <element signature="e#1528#2172#0" expanded="false" />
+                <element signature="e#2349#2495#0" expanded="false" />
+                <element signature="e#2543#2667#0" expanded="false" />
+                <element signature="e#2900#3344#0" expanded="false" />
+                <element signature="e#3429#3618#0" expanded="false" />
+                <element signature="e#3654#3732#0" expanded="false" />
+                <element signature="e#3768#4337#0" expanded="false" />
+                <element signature="e#4382#5134#0" expanded="false" />
+                <element signature="e#5473#6918#0" expanded="false" />
+                <element signature="e#5666#5843#0" expanded="false" />
+                <element signature="e#6572#6755#0" expanded="false" />
+                <element signature="e#6777#6916#0" expanded="false" />
+                <element signature="e#7005#7320#0" expanded="false" />
+                <element signature="e#7355#9470#0" expanded="false" />
+                <element signature="e#7412#7469#0" expanded="false" />
+                <element signature="e#7513#7919#0" expanded="false" />
+                <element signature="e#7957#8283#0" expanded="false" />
+                <element signature="e#8325#9002#0" expanded="false" />
+                <element signature="e#9051#9467#0" expanded="false" />
+                <element signature="e#9727#9861#0" expanded="false" />
+                <element signature="e#9873#10274#0" expanded="false" />
+                <element signature="e#10282#10733#0" expanded="false" />
+                <element signature="e#11063#11240#0" expanded="false" />
+                <element signature="e#11377#11660#0" expanded="false" />
+                <element signature="e#11985#13668#0" expanded="false" />
+                <element signature="e#13686#13855#0" expanded="false" />
+                <element signature="e#15633#15786#0" expanded="false" />
+                <element signature="e#16142#16194#0" expanded="false" />
+                <element signature="e#16389#16652#0" expanded="false" />
+                <element signature="e#16863#16956#0" expanded="false" />
+                <element signature="e#17000#17343#0" expanded="false" />
+                <element signature="e#17250#17340#0" expanded="false" />
+                <element signature="e#17389#17427#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/contact.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -87,27 +115,7 @@
         <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="210" column="10" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="789" column="26" selection-start-line="789" selection-start-column="26" selection-end-line="789" selection-end-column="26" />
+              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -134,17 +142,22 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/jrwd-slideshow/assets/css/fader.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/child-theme/functions.php" />
         <option value="$PROJECT_DIR$/template/css/main.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/basic-theme/inc/walkers/PrimaryArrowWalker.php" />
         <option value="$PROJECT_DIR$/template/index.html" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/child-theme/inc/searchform.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/header.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/child-theme/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/contact.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/template-home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/child-theme/sidebar.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/template-home.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/basic-theme/inc/walkers/PrimaryArrowWalker.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/loop/orderby.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/loop/add-to-cart.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/child-theme/style.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/archive-product.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/inc/product-sorting.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/content-single-product.php" />
       </list>
     </option>
   </component>
@@ -158,10 +171,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="1413" />
+    <option name="width" value="1680" />
+    <option name="height" value="1023" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -293,37 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="style.less" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Henk-Comics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Henk-Comics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="child-theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="woocommerce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -341,15 +323,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="child-theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,11 +341,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="basic-theme" />
+              <option name="myItemId" value="woocommerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Henk-Comics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Henk-Comics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woocommerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Henk-Comics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Henk-Comics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -391,14 +405,16 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Developer/PHPStorm/co2seminar.nl" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wp-content/themes/child-theme" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/loop" />
       <recent name="$PROJECT_DIR$/wp-content/themes/child-theme/assets/images" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/child-theme" />
       <recent name="$PROJECT_DIR$/wp-content/themes/child-theme/assets/fonts" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/child-theme/inc" />
-      <recent name="$PROJECT_DIR$/wp-content/themes" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.default.js">
@@ -475,19 +491,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="23" width="1280" height="1413" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="1023" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16953126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.2265625" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="973" y="23" width="304" height="836" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03497024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.034591194" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16953126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19761905" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="973" y="23" width="304" height="836" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -497,7 +514,6 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -517,212 +533,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
-          <folding>
-            <element signature="e#2169#3401#0" expanded="false" />
-            <element signature="e#3419#3608#0" expanded="false" />
-            <element signature="e#3644#3722#0" expanded="false" />
-            <element signature="e#3758#4327#0" expanded="false" />
-            <element signature="e#4372#5124#0" expanded="false" />
-            <element signature="e#5239#6578#0" expanded="false" />
-            <element signature="e#5627#6213#0" expanded="false" />
-            <element signature="e#6232#6415#0" expanded="false" />
-            <element signature="e#7173#7579#0" expanded="false" />
-            <element signature="e#7617#7943#0" expanded="false" />
-            <element signature="e#7985#8662#0" expanded="false" />
-            <element signature="e#8711#9127#0" expanded="false" />
-            <element signature="e#9448#11131#0" expanded="false" />
-            <element signature="e#11149#11318#0" expanded="false" />
-            <element signature="e#11793#13058#0" expanded="false" />
-            <element signature="e#13096#13249#0" expanded="false" />
-            <element signature="e#13605#13657#0" expanded="false" />
-            <element signature="e#13852#14115#0" expanded="false" />
-            <element signature="e#14326#14419#0" expanded="false" />
-            <element signature="e#14463#14806#0" expanded="false" />
-            <element signature="e#14713#14803#0" expanded="false" />
-            <element signature="e#14852#14890#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/template-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="57" selection-start-line="117" selection-start-column="57" selection-end-line="117" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449740130000" expanded="true" signature="1474:1507" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="210" column="10" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="789" column="26" selection-start-line="789" selection-start-column="26" selection-end-line="789" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2169#3401#0" expanded="false" />
-            <element signature="e#3419#3608#0" expanded="false" />
-            <element signature="e#3644#3722#0" expanded="false" />
-            <element signature="e#3758#4327#0" expanded="false" />
-            <element signature="e#4372#5124#0" expanded="false" />
-            <element signature="e#5239#6578#0" expanded="false" />
-            <element signature="e#5627#6213#0" expanded="false" />
-            <element signature="e#6232#6415#0" expanded="false" />
-            <element signature="e#7173#7579#0" expanded="false" />
-            <element signature="e#7617#7943#0" expanded="false" />
-            <element signature="e#7985#8662#0" expanded="false" />
-            <element signature="e#8711#9127#0" expanded="false" />
-            <element signature="e#9448#11131#0" expanded="false" />
-            <element signature="e#11149#11318#0" expanded="false" />
-            <element signature="e#11793#13058#0" expanded="false" />
-            <element signature="e#13096#13249#0" expanded="false" />
-            <element signature="e#13605#13657#0" expanded="false" />
-            <element signature="e#13852#14115#0" expanded="false" />
-            <element signature="e#14326#14419#0" expanded="false" />
-            <element signature="e#14463#14806#0" expanded="false" />
-            <element signature="e#14713#14803#0" expanded="false" />
-            <element signature="e#14852#14890#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/template-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="57" selection-start-line="117" selection-start-column="57" selection-end-line="117" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding>
-            <marker date="1449740130000" expanded="true" signature="1474:1507" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="210" column="10" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="789" column="26" selection-start-line="789" selection-start-column="26" selection-end-line="789" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/template-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="464" column="13" selection-start-line="464" selection-start-column="13" selection-end-line="464" selection-end-column="13" />
-          <folding>
-            <element signature="e#2169#3401#0" expanded="false" />
-            <element signature="e#3419#3608#0" expanded="false" />
-            <element signature="e#3644#3722#0" expanded="false" />
-            <element signature="e#3758#4327#0" expanded="false" />
-            <element signature="e#4372#5124#0" expanded="false" />
-            <element signature="e#5239#6578#0" expanded="false" />
-            <element signature="e#5627#6213#0" expanded="false" />
-            <element signature="e#6232#6415#0" expanded="false" />
-            <element signature="e#7173#7579#0" expanded="false" />
-            <element signature="e#7617#7943#0" expanded="false" />
-            <element signature="e#7985#8662#0" expanded="false" />
-            <element signature="e#8711#9127#0" expanded="false" />
-            <element signature="e#9448#11131#0" expanded="false" />
-            <element signature="e#11149#11318#0" expanded="false" />
-            <element signature="e#11793#13058#0" expanded="false" />
-            <element signature="e#13096#13249#0" expanded="false" />
-            <element signature="e#13605#13657#0" expanded="false" />
-            <element signature="e#13852#14115#0" expanded="false" />
-            <element signature="e#14326#14419#0" expanded="false" />
-            <element signature="e#14463#14806#0" expanded="false" />
-            <element signature="e#14713#14803#0" expanded="false" />
-            <element signature="e#14852#14890#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="103" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="131" column="12" selection-start-line="131" selection-start-column="12" selection-end-line="169" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,28 +575,39 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="221" column="25" selection-start-line="221" selection-start-column="25" selection-end-line="221" selection-end-column="25" />
           <folding>
-            <element signature="e#2169#3401#0" expanded="false" />
-            <element signature="e#3419#3608#0" expanded="false" />
-            <element signature="e#3644#3722#0" expanded="false" />
-            <element signature="e#3758#4327#0" expanded="false" />
-            <element signature="e#4372#5124#0" expanded="false" />
-            <element signature="e#5239#6578#0" expanded="false" />
-            <element signature="e#5627#6213#0" expanded="false" />
-            <element signature="e#6232#6415#0" expanded="false" />
-            <element signature="e#7173#7579#0" expanded="false" />
-            <element signature="e#7617#7943#0" expanded="false" />
-            <element signature="e#7985#8662#0" expanded="false" />
-            <element signature="e#8711#9127#0" expanded="false" />
-            <element signature="e#9448#11131#0" expanded="false" />
-            <element signature="e#11149#11318#0" expanded="false" />
-            <element signature="e#11793#13058#0" expanded="false" />
-            <element signature="e#13096#13249#0" expanded="false" />
-            <element signature="e#13605#13657#0" expanded="false" />
-            <element signature="e#13852#14115#0" expanded="false" />
-            <element signature="e#14326#14419#0" expanded="false" />
-            <element signature="e#14463#14806#0" expanded="false" />
-            <element signature="e#14713#14803#0" expanded="false" />
-            <element signature="e#14852#14890#0" expanded="false" />
+            <element signature="e#1528#2172#0" expanded="false" />
+            <element signature="e#2349#2495#0" expanded="false" />
+            <element signature="e#2543#2667#0" expanded="false" />
+            <element signature="e#2900#3344#0" expanded="false" />
+            <element signature="e#3429#3618#0" expanded="false" />
+            <element signature="e#3654#3732#0" expanded="false" />
+            <element signature="e#3768#4337#0" expanded="false" />
+            <element signature="e#4382#5134#0" expanded="false" />
+            <element signature="e#5473#6918#0" expanded="false" />
+            <element signature="e#5666#5843#0" expanded="false" />
+            <element signature="e#6572#6755#0" expanded="false" />
+            <element signature="e#6777#6916#0" expanded="false" />
+            <element signature="e#7005#7320#0" expanded="false" />
+            <element signature="e#7355#9470#0" expanded="false" />
+            <element signature="e#7412#7469#0" expanded="false" />
+            <element signature="e#7513#7919#0" expanded="false" />
+            <element signature="e#7957#8283#0" expanded="false" />
+            <element signature="e#8325#9002#0" expanded="false" />
+            <element signature="e#9051#9467#0" expanded="false" />
+            <element signature="e#9727#9861#0" expanded="false" />
+            <element signature="e#9873#10274#0" expanded="false" />
+            <element signature="e#10282#10733#0" expanded="false" />
+            <element signature="e#11063#11240#0" expanded="false" />
+            <element signature="e#11377#11660#0" expanded="false" />
+            <element signature="e#11985#13668#0" expanded="false" />
+            <element signature="e#13686#13855#0" expanded="false" />
+            <element signature="e#15633#15786#0" expanded="false" />
+            <element signature="e#16142#16194#0" expanded="false" />
+            <element signature="e#16389#16652#0" expanded="false" />
+            <element signature="e#16863#16956#0" expanded="false" />
+            <element signature="e#17000#17343#0" expanded="false" />
+            <element signature="e#17250#17340#0" expanded="false" />
+            <element signature="e#17389#17427#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -792,7 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,28 +624,39 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="168" column="24" selection-start-line="168" selection-start-column="24" selection-end-line="168" selection-end-column="24" />
           <folding>
-            <element signature="e#2169#3401#0" expanded="false" />
-            <element signature="e#3419#3608#0" expanded="false" />
-            <element signature="e#3644#3722#0" expanded="false" />
-            <element signature="e#3758#4327#0" expanded="false" />
-            <element signature="e#4372#5124#0" expanded="false" />
-            <element signature="e#5239#6578#0" expanded="false" />
-            <element signature="e#5627#6213#0" expanded="false" />
-            <element signature="e#6232#6415#0" expanded="false" />
-            <element signature="e#7173#7579#0" expanded="false" />
-            <element signature="e#7617#7943#0" expanded="false" />
-            <element signature="e#7985#8662#0" expanded="false" />
-            <element signature="e#8711#9127#0" expanded="false" />
-            <element signature="e#9448#11131#0" expanded="false" />
-            <element signature="e#11149#11318#0" expanded="false" />
-            <element signature="e#11793#13058#0" expanded="false" />
-            <element signature="e#13096#13249#0" expanded="false" />
-            <element signature="e#13605#13657#0" expanded="false" />
-            <element signature="e#13852#14115#0" expanded="false" />
-            <element signature="e#14326#14419#0" expanded="false" />
-            <element signature="e#14463#14806#0" expanded="false" />
-            <element signature="e#14713#14803#0" expanded="false" />
-            <element signature="e#14852#14890#0" expanded="false" />
+            <element signature="e#1528#2172#0" expanded="false" />
+            <element signature="e#2349#2495#0" expanded="false" />
+            <element signature="e#2543#2667#0" expanded="false" />
+            <element signature="e#2900#3344#0" expanded="false" />
+            <element signature="e#3429#3618#0" expanded="false" />
+            <element signature="e#3654#3732#0" expanded="false" />
+            <element signature="e#3768#4337#0" expanded="false" />
+            <element signature="e#4382#5134#0" expanded="false" />
+            <element signature="e#5473#6918#0" expanded="false" />
+            <element signature="e#5666#5843#0" expanded="false" />
+            <element signature="e#6572#6755#0" expanded="false" />
+            <element signature="e#6777#6916#0" expanded="false" />
+            <element signature="e#7005#7320#0" expanded="false" />
+            <element signature="e#7355#9470#0" expanded="false" />
+            <element signature="e#7412#7469#0" expanded="false" />
+            <element signature="e#7513#7919#0" expanded="false" />
+            <element signature="e#7957#8283#0" expanded="false" />
+            <element signature="e#8325#9002#0" expanded="false" />
+            <element signature="e#9051#9467#0" expanded="false" />
+            <element signature="e#9727#9861#0" expanded="false" />
+            <element signature="e#9873#10274#0" expanded="false" />
+            <element signature="e#10282#10733#0" expanded="false" />
+            <element signature="e#11063#11240#0" expanded="false" />
+            <element signature="e#11377#11660#0" expanded="false" />
+            <element signature="e#11985#13668#0" expanded="false" />
+            <element signature="e#13686#13855#0" expanded="false" />
+            <element signature="e#15633#15786#0" expanded="false" />
+            <element signature="e#16142#16194#0" expanded="false" />
+            <element signature="e#16389#16652#0" expanded="false" />
+            <element signature="e#16863#16956#0" expanded="false" />
+            <element signature="e#17000#17343#0" expanded="false" />
+            <element signature="e#17250#17340#0" expanded="false" />
+            <element signature="e#17389#17427#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -831,9 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449740130000" expanded="true" signature="1474:1507" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -893,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/basic-theme/inc/walkers/PrimaryArrowWalker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5133333">
-          <caret line="21" column="90" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2911111">
@@ -914,53 +738,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
-          <folding>
-            <marker date="1449740130000" expanded="true" signature="1474:1507" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/contact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="210" column="10" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="789" column="26" selection-start-line="789" selection-start-column="26" selection-end-line="789" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/basic-theme/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,7 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,62 +756,260 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38053098">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26349893">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024444444">
+          <caret line="210" column="10" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16262975">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/content-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/archive-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.538462">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/loop/orderby.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.769231">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/basic-theme/assets/css/arrow-icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.615385">
+          <caret line="65" column="26" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/img/cart_2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/img/cart.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/screenshot.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/basic-theme/inc/walkers/PrimaryArrowWalker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5133333">
+          <caret line="21" column="85" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/loop/orderby.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24444444">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8053097">
-          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.5377778">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="64" selection-end-column="24" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/loop/add-to-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.076124564">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/woocommerce.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6211605">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/loop/result-count.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.84615386">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/wc-template-functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22666667">
+          <caret line="669" column="13" selection-start-line="669" selection-start-column="13" selection-end-line="669" selection-end-column="13" />
+          <folding>
+            <marker date="1447851092000" expanded="true" signature="35955:36033" placeholder="SELECT term_..${{$wpdb-&gt;term_taxonomy}..." />
+            <marker date="1447851092000" expanded="true" signature="45457:45470" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/wc-template-hooks.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20274915">
+          <caret line="77" column="69" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/template-home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.18584071">
-          <caret line="65" column="53" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.153846">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        <state vertical-scroll-proportion="-44.76923">
+          <caret line="82" column="57" selection-start-line="82" selection-start-column="57" selection-end-line="83" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2751408">
-          <caret line="426" column="16" selection-start-line="426" selection-start-column="16" selection-end-line="426" selection-end-column="16" />
+        <state vertical-scroll-proportion="-9.307693">
+          <caret line="303" column="13" selection-start-line="303" selection-start-column="13" selection-end-line="303" selection-end-column="13" />
           <folding>
-            <element signature="e#2169#3401#0" expanded="false" />
-            <element signature="e#3419#3608#0" expanded="false" />
-            <element signature="e#3644#3722#0" expanded="false" />
-            <element signature="e#3758#4327#0" expanded="false" />
-            <element signature="e#4372#5124#0" expanded="false" />
-            <element signature="e#5239#6578#0" expanded="false" />
-            <element signature="e#5627#6213#0" expanded="false" />
-            <element signature="e#6232#6415#0" expanded="false" />
-            <element signature="e#7173#7579#0" expanded="false" />
-            <element signature="e#7617#7943#0" expanded="false" />
-            <element signature="e#7985#8662#0" expanded="false" />
-            <element signature="e#8711#9127#0" expanded="false" />
-            <element signature="e#9448#11131#0" expanded="false" />
-            <element signature="e#11149#11318#0" expanded="false" />
-            <element signature="e#11793#13058#0" expanded="false" />
-            <element signature="e#13096#13249#0" expanded="false" />
-            <element signature="e#13605#13657#0" expanded="false" />
-            <element signature="e#13852#14115#0" expanded="false" />
-            <element signature="e#14326#14419#0" expanded="false" />
-            <element signature="e#14463#14806#0" expanded="false" />
-            <element signature="e#14713#14803#0" expanded="false" />
-            <element signature="e#14852#14890#0" expanded="false" />
+            <element signature="e#1528#2172#0" expanded="false" />
+            <element signature="e#2349#2495#0" expanded="false" />
+            <element signature="e#2543#2667#0" expanded="false" />
+            <element signature="e#2900#3344#0" expanded="false" />
+            <element signature="e#3429#3618#0" expanded="false" />
+            <element signature="e#3654#3732#0" expanded="false" />
+            <element signature="e#3768#4337#0" expanded="false" />
+            <element signature="e#4382#5134#0" expanded="false" />
+            <element signature="e#5473#6918#0" expanded="false" />
+            <element signature="e#5666#5843#0" expanded="false" />
+            <element signature="e#6572#6755#0" expanded="false" />
+            <element signature="e#6777#6916#0" expanded="false" />
+            <element signature="e#7005#7320#0" expanded="false" />
+            <element signature="e#7355#9470#0" expanded="false" />
+            <element signature="e#7412#7469#0" expanded="false" />
+            <element signature="e#7513#7919#0" expanded="false" />
+            <element signature="e#7957#8283#0" expanded="false" />
+            <element signature="e#8325#9002#0" expanded="false" />
+            <element signature="e#9051#9467#0" expanded="false" />
+            <element signature="e#9727#9861#0" expanded="false" />
+            <element signature="e#9873#10274#0" expanded="false" />
+            <element signature="e#10282#10733#0" expanded="false" />
+            <element signature="e#11063#11240#0" expanded="false" />
+            <element signature="e#11377#11660#0" expanded="false" />
+            <element signature="e#11985#13668#0" expanded="false" />
+            <element signature="e#13686#13855#0" expanded="false" />
+            <element signature="e#15633#15786#0" expanded="false" />
+            <element signature="e#16142#16194#0" expanded="false" />
+            <element signature="e#16389#16652#0" expanded="false" />
+            <element signature="e#16863#16956#0" expanded="false" />
+            <element signature="e#17000#17343#0" expanded="false" />
+            <element signature="e#17250#17340#0" expanded="false" />
+            <element signature="e#17389#17427#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/archive-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.230769">
+          <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33261338">
+          <caret line="381" column="29" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1822224">
+          <caret line="717" column="10" selection-start-line="717" selection-start-column="9" selection-end-line="717" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/loop/add-to-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09777778">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <marker date="1450194258000" expanded="true" signature="403:481" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/assets/js/default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/woocommerce/content-single-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1711111">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/child-theme/inc/product-sorting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41555557">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
