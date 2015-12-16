@@ -20,6 +20,8 @@ $(document).ready(function() {
     }, function() { // Herstart de interval
         galleryInterval = setInterval(function(){ loopGalery(gallery, galleryWrapper, maxWidth)}, 7000);
     });
+
+    var $el, $ps, $up, totalHeight;
 });
 
 
@@ -43,3 +45,33 @@ function loopGalery(parent, wrapper, maxWidth)
         }, 2000);
     });
 }
+
+$(".description-box .read-more").click(function() {
+    totalHeight = 0
+
+    $el = $(this);
+    $p  = $el;
+    $up = $p.parent();
+    $ps = $up.find(".comic-description");
+  
+    // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+    $ps.each(function() {
+        totalHeight += $(this).outerHeight();
+    });
+        
+    $up
+        .css({
+        // Set height to prevent instant jumpdown when max height is removed
+        "height": $up.height(),
+        "max-height": 9999
+    })
+    .animate({
+        "height": totalHeight
+    });
+  
+    // fade out read-more
+    $p.fadeOut();
+  
+    // prevent jump-down
+    return false;
+});
