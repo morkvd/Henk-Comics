@@ -14,47 +14,17 @@ get_header( 'shop' ); ?>
 
 <div class="container">
 	<section class="products-page">
-		<nav class="categories col-md-3">
-			<header>
-				<h2>Store</h2>
-			</header>
-
-			<a href="<?= WC()->cart->get_cart_url(); ?>" class="cart" title="<?php _e( 'View your shopping cart' ); ?>">
-				<img class="cart-img" src="<?= get_stylesheet_directory_uri(); ?>/assets/images/cart.png" alt="shopping basket">
-				<span class="amount-in-cart"><?= WC()->cart->cart_contents_count; ?></span>
-			</a>
-
-			<?php
-			$categories = get_categories( array(
-				'taxonomy' => 'product_cat',
-				'orderby' => 'name',
-				'order' => 'ASC',
-				'hide_empty' => 0
-			));
-
-			if( $categories ) : ?>
-				<ul>
-					<?php foreach( $categories as $cat ) : ?>
-					<li>
-						<a href="/products/<?= $cat->category_nicename; ?>">
-							<span><?= $cat->name; ?></span>
-							<span class="fa fa-chevron-circle-right"></span>
-						</a>
-					</li>
-					<?php endforeach; ?>
-				</ul>
-			<?php endif; ?>
-		</nav>
+		<?php get_template_part('woocommerce/inc/store', 'navigation'); ?>
 
 		<section class="products-overview col-md-9">
 		<?php if( have_posts() ) : ?>
-			<header class="category-title">
-				<div class="page-title">
+			<header class="title">
+				<div class="category">
 					<h1 class="bboom"><?php woocommerce_page_title(); ?></h1>
 					<span><?php wc_get_template_part( 'loop/result', 'count' ); ?></span>
 				</div>
 
-				<?php get_template_part('inc/product', 'sorting'); ?>
+				<?php get_template_part('woocommerce/inc/product', 'sorting'); ?>
 			</header>
 
 			<?php

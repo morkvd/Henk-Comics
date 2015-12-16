@@ -596,6 +596,7 @@ main {
 		width: 100%; min-height: 40em;
 		float: left;
 
+		// Zijbalk met navigatie van cateogrieën
 		nav.categories {
 			position: absolute;
 			top: 0; left: 0;
@@ -651,7 +652,8 @@ main {
 						padding: 1rem 0;
 						border-bottom: 1px solid #000;
 
-						&:hover {
+						&:hover,
+						&.active {
 							color: @red;
 							font-weight: bold;
 						}
@@ -670,6 +672,8 @@ main {
 			}
 		}
 
+		// Detail en overzicht
+		article.products-single,
 		section.products-overview {
 			position: relative;
 			z-index: 1;
@@ -679,14 +683,52 @@ main {
 			padding: 1.5rem 2rem;
 			background: #fff;
 
-			header.category-title {
-				width: 100%;
+			// Pagina titel
+			>header.title {
+				width: 100%; min-height: 2.5rem;
 				float: left;
 				margin-bottom: 1.5rem;
 				padding-bottom: .4rem;
 				border-bottom: 1px solid #000;
 
-				div.page-title {
+				nav {
+					color: #777;
+					font-size: .9rem;
+				}
+
+				// Breadcrumb
+				nav.woocommerce-breadcrumb {
+					float: left;
+					a { color: @red; }
+				}
+			}
+
+
+			ul.products li {
+				a:first-of-type {
+					img { margin-bottom: 0;}
+
+					h3 {
+						min-height: 3.3rem;
+						display: block;
+						font-weight: normal;
+					}
+
+					span.price {
+						color: #000;
+						font-size: 1rem;
+						font-weight: bold;
+					}
+				}
+
+				a.btn { margin-top: .3rem;}
+			}
+		}
+
+		// Overzicht / categorie
+		section.products-overview {
+			header.title {
+				div.category {
 					float: left;
 
 					h1 {
@@ -710,25 +752,58 @@ main {
 					}
 				}
 			}
+		}
 
-			ul.products li {
-				a:first-of-type {
-					img { margin-bottom: 0;}
+		// Detail / zoom
+		article.products-single {
+			header.title nav.product-nav {
+				float: right;
 
-					h3 {
-						min-height: 3.3rem;
-						display: block;
-						font-weight: normal;
-					}
+				>div {
+					float: left;
 
-					span.price {
-						color: #000;
-						font-size: 1rem;
-						font-weight: bold;
+					&:first-of-type { margin-right: 1rem; }
+					a:hover { color: @red;}
+				}
+			}
+
+			div.summary {
+				width: 100%;
+				float: left;
+
+				// Product title met prijs
+				h1.product-title {
+					width: 100%;
+					float: left;
+					margin-bottom: 1rem;
+
+					div.price { float: right;}
+				}
+
+				// Attributen per product
+				table.shop_attributes {
+					tr {
+						th {
+							text-align: left;
+							padding-left: 1rem;
+						}
+
+						td {
+							padding-left: 1rem;
+							a { color: @red;}
+						}
 					}
 				}
 
-				a.btn { margin-top: .3rem;}
+				// Gerelateerde artikelen
+				div.related-products {
+					float: left;
+
+					h2 {
+						display: block;
+						margin-bottom: .5rem;
+					}
+				}
 			}
 		}
 	}

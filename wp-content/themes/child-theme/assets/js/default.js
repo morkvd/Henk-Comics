@@ -101,7 +101,7 @@ $(window).resize(function() {
 
 function toggleSubmenuMobile(event, elem)
 {
-    if (event.target.className.indexOf('fo') >= 0 && windowWidth < 991) {
+    if (event.target.className.indexOf('fa') >= 0 && windowWidth < 991) {
         event.preventDefault();
         elem.closest('li').find('ul.sub-menu').slideToggle();
     }
