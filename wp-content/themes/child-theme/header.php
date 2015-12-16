@@ -28,7 +28,6 @@
     <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico" type="image/x-icon" />
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900,900italic,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri(); ?>/assets/css/arrow-icons.css" />
     <link rel="stylesheet" type="text/css" href="/libaries/fontawesome/font-awesome.min.css" />
 	<link rel="stylesheet" media="screen" href="/libaries/bootstrap/css/grid12.css">
 
@@ -79,6 +78,7 @@
         <span class="fa fa-bars toggle-mobile alignright"></span>
     </header>
 
-    <?php do_shortcode('[JRWD_slideshow]'); ?>
+
+    <?php if (is_page('Home')) echo do_shortcode('[JRWD_slideshow]'); ?>
 
     <main <?php body_class(); ?>>

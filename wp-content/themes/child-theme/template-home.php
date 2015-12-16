@@ -28,9 +28,9 @@ get_header();
 							<div>
 								<?php while ($featuredProducts->have_posts()) :
 									$featuredProducts->the_post();
-									$product = new WC_Product($featuredProducts->post->ID);  ?>
+									$product = new WC_Product($featuredProducts->post->ID); ?>
 
-									<a href="" class="item col-md-2">
+									<a href="<?= get_permalink($product->post->id); ?>" class="item col-md-2">
 										<figure>
 											<?= $product->get_image(); ?>
 										</figure>

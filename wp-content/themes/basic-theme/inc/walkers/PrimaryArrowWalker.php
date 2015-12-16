@@ -19,7 +19,7 @@ class PrimaryArrowWalker extends Walker_Nav_Menu
 			$output .= '<a href="'. $item->url .'">';
 
 				if ($depth === 0 && in_array('menu-item-has-children', $item->classes))
-					$output .= $item->title . '<span class="fo icons-angle-down"></span>';
+					$output .= $item->title . '<span class="fa fa-chevron-circle-down"></span>';
 				else
 					$output .= $item->title;
 
