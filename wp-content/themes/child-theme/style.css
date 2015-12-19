@@ -634,7 +634,8 @@ main section.products-page nav.categories ul li a {
   padding: 1rem 0;
   border-bottom: 1px solid #000;
 }
-main section.products-page nav.categories ul li a:hover {
+main section.products-page nav.categories ul li a:hover,
+main section.products-page nav.categories ul li a.active {
   color: #ed1c24;
   font-weight: bold;
 }
@@ -646,6 +647,7 @@ main section.products-page nav.categories ul li a span.fa {
   margin-top: .3rem;
   font-size: .9rem;
 }
+main section.products-page article.products-single,
 main section.products-page section.products-overview {
   position: relative;
   z-index: 1;
@@ -654,47 +656,107 @@ main section.products-page section.products-overview {
   padding: 1.5rem 2rem;
   background: #fff;
 }
-main section.products-page section.products-overview header.category-title {
+main section.products-page article.products-single > header.title,
+main section.products-page section.products-overview > header.title {
   width: 100%;
+  min-height: 2.5rem;
   float: left;
   margin-bottom: 1.5rem;
   padding-bottom: .4rem;
   border-bottom: 1px solid #000;
 }
-main section.products-page section.products-overview header.category-title div.page-title {
+main section.products-page article.products-single > header.title nav,
+main section.products-page section.products-overview > header.title nav {
+  color: #777;
+  font-size: .9rem;
+}
+main section.products-page article.products-single > header.title nav.woocommerce-breadcrumb,
+main section.products-page section.products-overview > header.title nav.woocommerce-breadcrumb {
   float: left;
 }
-main section.products-page section.products-overview header.category-title div.page-title h1 {
+main section.products-page article.products-single > header.title nav.woocommerce-breadcrumb a,
+main section.products-page section.products-overview > header.title nav.woocommerce-breadcrumb a {
   color: #ed1c24;
-  font-size: 2rem;
 }
-main section.products-page section.products-overview header.category-title div.page-title span {
-  display: block;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-main section.products-page section.products-overview header.category-title form {
-  margin-top: .3rem;
-}
-main section.products-page section.products-overview header.category-title form span {
-  float: left;
-  margin: .8rem .8rem 0 0;
-}
+main section.products-page article.products-single ul.products li a:first-of-type img,
 main section.products-page section.products-overview ul.products li a:first-of-type img {
   margin-bottom: 0;
 }
+main section.products-page article.products-single ul.products li a:first-of-type h3,
 main section.products-page section.products-overview ul.products li a:first-of-type h3 {
   min-height: 3.3rem;
   display: block;
   font-weight: normal;
 }
+main section.products-page article.products-single ul.products li a:first-of-type span.price,
 main section.products-page section.products-overview ul.products li a:first-of-type span.price {
   color: #000;
   font-size: 1rem;
   font-weight: bold;
 }
+main section.products-page article.products-single ul.products li a.btn,
 main section.products-page section.products-overview ul.products li a.btn {
   margin-top: .3rem;
+}
+main section.products-page section.products-overview header.title div.category {
+  float: left;
+}
+main section.products-page section.products-overview header.title div.category h1 {
+  color: #ed1c24;
+  font-size: 2rem;
+}
+main section.products-page section.products-overview header.title div.category span {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+main section.products-page section.products-overview header.title form {
+  margin-top: .3rem;
+}
+main section.products-page section.products-overview header.title form span {
+  float: left;
+  margin: .8rem .8rem 0 0;
+}
+main section.products-page article.products-single header.title nav.product-nav {
+  float: right;
+}
+main section.products-page article.products-single header.title nav.product-nav > div {
+  float: left;
+}
+main section.products-page article.products-single header.title nav.product-nav > div:first-of-type {
+  margin-right: 1rem;
+}
+main section.products-page article.products-single header.title nav.product-nav > div a:hover {
+  color: #ed1c24;
+}
+main section.products-page article.products-single div.summary {
+  width: 100%;
+  float: left;
+}
+main section.products-page article.products-single div.summary h1.product-title {
+  width: 100%;
+  float: left;
+  margin-bottom: 1rem;
+}
+main section.products-page article.products-single div.summary h1.product-title div.price {
+  float: right;
+}
+main section.products-page article.products-single div.summary table.shop_attributes tr th {
+  text-align: left;
+  padding-left: 1rem;
+}
+main section.products-page article.products-single div.summary table.shop_attributes tr td {
+  padding-left: 1rem;
+}
+main section.products-page article.products-single div.summary table.shop_attributes tr td a {
+  color: #ed1c24;
+}
+main section.products-page article.products-single div.summary div.related-products {
+  float: left;
+}
+main section.products-page article.products-single div.summary div.related-products h2 {
+  display: block;
+  margin-bottom: .5rem;
 }
 aside.sidebar {
   padding-left: 2rem;
