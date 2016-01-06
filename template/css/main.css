@@ -23,33 +23,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* cuts off images diagonally (put overflow hidden on parent element to fix part of the triangle sticking out)  */
-.hide-overflow {
-  overflow: hidden;
-}
-.triangle-mask-left:before, 
-.triangle-mask-right:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 10%;
-  z-index: 1000;
-  border-style: solid;
-  bottom: 0;
-}
-.triangle-mask-left:before {
-  border-width: 22em 4em 0 0;
-  border-width: 30em 5em 0 0;
-  border-color: #FFF transparent transparent #FFF;
-  left: 0;
-}
-.triangle-mask-right:before {
-  border-width: 0 4em 22em 0;
-  border-width: 0 5em 30em 0;
-  border-color: transparent #FFF transparent;
-  right: 0;
-}
-
 /* menu */
 nav.top-menu {
   background-color: #fff;
@@ -531,60 +504,26 @@ a.nav-link span {
   height: 2.4em;
 }
 
-
-
-/* upcoming event */
-.event { 
-  padding-bottom: 7em;
-  background-image: url(../img/event-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; 
-  color: #fff;
+/* home upcoming facebook event */
+.facebook-event-home {
+  background-color: #fff;
+  margin-top: 6em;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-.event .event-image {
-  width: 100%;
-  margin: -1px 0 0 0; /*  fix for mysterious margin on the event image, oh css you so crazy. */
+ a.home-fb-event-link {
+  margin-top: 1em;
+  position: static;
+  display: inline-block;
+ }
+.facebook-event-home section > h1 {
+    padding: 0.6em 1.5em;
+    position: absolute;
+    top: -2.3em;
+    left: 0px;
 }
-.event h1 {
-  position: absolute;
-  top: -2.3em;
-}
-.event h2 {
-  font-weight: 900;
-  font-size: 3.6em;
-  margin-bottom: .4em;
-}
-.event h3 {
-  font-family: "badaboom_bbregular",sans-serif;
-  font-size: 5em;
-  margin-top: -0.5em;
-  text-shadow: .1em .1em 1em #000;
-  letter-spacing: -2px;
-}
-.event p.intro {
-  font-size: 1.6em;
-  font-style: italic;
-  font-weight: 400;
-  margin-bottom: .8em;
-}
-.event p {
-  font-size: 1.2em;
-}
-.event-textcontainer {
-  position: relative;
-}
-.event-textcontainer a.to-event {
-  background-color: #EE1D25;
-  font-family: "Source Sans Pro",sans-serif;
-  font-weight: 900;
-  font-size: 2.6em;
-  color: #FFF;
-  padding: .13em .4em .22em;
-  position: absolute;
-  right: .4em;
-
-    bottom: -1.32em;
-  line-height: 1em;
+.facebook-event .cutoffbox-text {
+  padding: 2em 1em 2em 2em;
 }
 
 
@@ -896,19 +835,6 @@ section.products-overview .product a.nav-link span {
 
 }
 
-/* triangle masks for inside gray blocks */
-.regular-page .triangle-mask-left:before {
-  border-color: #dbdbdb transparent transparent #dbdbdb;
-}
-.regular-page .triangle-mask-right:before {
-  border-color: transparent #dbdbdb transparent;
-}
-.regular-page .triangle-mask-left:before img,
-.regular-page .triangle-mask-right:before img {
-  margin: 0;
-  padding: 0;
-}
-
 /* inside of block with cutoff photo */
 .regular-page p,
 .regular-page li {
@@ -918,43 +844,37 @@ section.products-overview .product a.nav-link span {
   margin: 0;
   position: relative;
 }
-.regular-page .col-xs-5,
-.regular-page .col-xs-6,
-.regular-page .col-xs-7 {
+.regular-page .col-sm-5,
+.regular-page .col-sm-6,
+.regular-page .col-sm-7 {
   margin: 0;
   padding: 0 2em;
 }
-.regular-page .col-xs-5:last-child,
-.regular-page .col-xs-6:last-child,
-.regular-page .col-xs-7:last-child {
+.regular-page .col-sm-5:last-child,
+.regular-page .col-sm-6:last-child,
+.regular-page .col-sm-7:last-child {
   float: right;
   text-align: right;
 }
-.regular-page .col-xs-6.cutoff-img,
-.regular-page .col-xs-7.cutoff-img {
+.col-sm-6.cutoffbox-img,
+.col-sm-7.cutoffbox-img {
   padding: 0;
-  position: absolute;
   overflow: hidden; /* hides the overflowing triangle that cutsoff the photo */
-  height: 100%;
-  left: 0;
 }
-.regular-page .col-xs-5 + .col-xs-7.cutoff-img,
-.regular-page .col-xs-6 + .col-xs-6.cutoff-img {  
+.col-sm-5 + .col-sm-7.cutoffbox-img,
+.col-sm-6 + .col-sm-6.cutoffbox-img {  
   left: unset;
   right: 0;
 }
+.cutoffbox-text {
+  display: block;
+  padding-bottom: 2em;
+}
 
-.facebook-event .col-xs-6.cutoff-img {
-  display: none;
-}
-.facebook-event .col-xs-6 {
+.cutoffbox-img {
+  display: block;
   width: 100%;
-}
-.contactpage-box .col-xs-7.cutoff-img {
-  display: none;
-}
-.contactpage-box .col-xs-5 {
-  width: 100%;
+  height: 15em;
 }
 
 
@@ -965,7 +885,7 @@ section.products-overview .product a.nav-link span {
 .regular-page .row p:last-child {
   margin-bottom: 2em;
 }
-/* add images to the cutoff boxes */
+/* add placeholder bgimages to the cutoffbox boxes */
 .regular-page section.maps-placeholder {
   background: transparent none no-repeat scroll center center / cover;
   background-image: url("../img/maps-placeholder.jpg");
@@ -982,7 +902,7 @@ section.products-overview .product a.nav-link span {
   width: 95%;
 }
 
-.regular-page .facebook-event a.nav-link {
+.regular-page a.nav-link {
   background-color: hsl(0, 0%, 0%);
   color: hsl(358, 86%, 52%);
   padding: 0.8em 1.8em;
@@ -995,7 +915,7 @@ section.products-overview .product a.nav-link span {
   position: static;
   bottom: unset;
 }
-.regular-page section.comicbookstoreday {
+.comicbookstoreday {
   background: transparent none no-repeat scroll center center / cover;
   background-image: url("../img/comicbookstoreday.jpg");
 }
@@ -1008,19 +928,6 @@ section.products-overview .product a.nav-link span {
   }
 }
 @media (min-width: 600px) {
-  .facebook-event .col-xs-6.cutoff-img {
-    display: block;
-  }
-  .facebook-event .col-xs-6 {
-    width: 50%;
-  }
-  .contactpage-box .col-xs-7.cutoff-img {
-    display: block;
-  }
-  .contactpage-box .col-xs-5 {
-    width: 58.3333%;
-  }
-
   /* product overview */
   section.products-overview .product {
     width: 28.9%;
@@ -1035,7 +942,6 @@ section.products-overview .product a.nav-link span {
   section.products-overview .product:nth-child(3n+2) {
     margin-right: 0;
   }
-
 }
 @media (min-width: 648px) { 
   /* tweaking size of sideshow */
@@ -1107,8 +1013,69 @@ section.products-overview .product a.nav-link span {
     margin: 10em 8em 4em;
   }
 
+
+  /* cutoff box */
   .col-sm-7.triangle-mask-left {
     width: 58.3333%;
+  }
+  .col-sm-7.cutoffbox-img {
+    display: block;
+  }
+  .col-sm-6.cutoffbox-img,
+  .col-sm-7.cutoffbox-img {
+    position: absolute;
+    height: 100%;
+  }
+
+  .col-sm-7.cutoffbox-img {
+    display: block;
+    width: 58.3333%;
+    height: 100%;
+  }
+  .col-sm-6.cutoffbox-img {
+    display: block;
+    width: 50%;
+    height: 100%;
+  }
+
+  /* cuts off images diagonally (put overflow hidden on parent element to fix part of the triangle sticking out)  */
+  .hide-overflow {
+    overflow: hidden;
+  }
+  .triangle-mask-left:before, 
+  .triangle-mask-right:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    z-index: 1000;
+    border-style: solid;
+    bottom: 0;
+  }
+  .triangle-mask-left:before {
+    border-width: 22em 4em 0 0;
+    border-width: 30em 5em 0 0;
+    border-color: #FFF transparent transparent #FFF;
+    left: 0;
+  }
+  .triangle-mask-right:before {
+    border-width: 0 4em 22em 0;
+    border-width: 0 5em 30em 0;
+    border-color: transparent #FFF transparent;
+    right: 0;
+  }
+
+  /* triangle masks for inside gray blocks */
+  .regular-page .triangle-mask-left:before {
+    border-color: #dbdbdb transparent transparent #dbdbdb;
+  }
+  .regular-page .triangle-mask-right:before {
+    border-color: transparent #dbdbdb transparent;
+  }
+  .regular-page .triangle-mask-left:before img,
+  .regular-page .triangle-mask-right:before img {
+    margin: 0;
+    padding: 0;
   }
 }
 
