@@ -23,33 +23,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* cuts off images diagonally (put overflow hidden on parent element to fix part of the triangle sticking out)  */
-.hide-overflow {
-  overflow: hidden;
-}
-.triangle-mask-left:before, 
-.triangle-mask-right:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 10%;
-  z-index: 1000;
-  border-style: solid;
-  bottom: 0;
-}
-.triangle-mask-left:before {
-  border-width: 22em 4em 0 0;
-  border-width: 30em 5em 0 0;
-  border-color: #FFF transparent transparent #FFF;
-  left: 0;
-}
-.triangle-mask-right:before {
-  border-width: 0 4em 22em 0;
-  border-width: 0 5em 30em 0;
-  border-color: transparent #FFF transparent;
-  right: 0;
-}
-
 /* menu */
 nav.top-menu {
   background-color: #fff;
@@ -363,15 +336,21 @@ a.nav-link span {
   display: inline-block;
   color: #39a2de;
 }
-.henks-facebook .date {
+
+/* also used on events page */
+.date {
   position: absolute;
   display: inline-block;
   right: 2em;
   bottom: 1em;
   color: #fff;
 }
-.henks-facebook .date-day,
-.henks-facebook .date-month {
+.triangle-mask-right .date {
+  right: unset;
+  left: 2em;
+}
+.date-day,
+.date-month {
   font-family: "Source Sans Pro",sans-serif;
   text-shadow: .1em .1em 1em #000,
                0em 0em 1em #000;
@@ -379,11 +358,15 @@ a.nav-link span {
   display: block;
   text-align: right;
 }
-.henks-facebook .date-day {
+.triangle-mask-right .date-day,
+.triangle-mask-right .date-month {
+  text-align: left;
+}
+.date-day {
   font-size: 5em;
   line-height: .85em;
 }
-.henks-facebook .date-month {
+.date-month {
   font-size: 1.3em;
   line-height: 1em;
 }
@@ -521,60 +504,26 @@ a.nav-link span {
   height: 2.4em;
 }
 
-
-
-/* upcoming event */
-.event { 
-  padding-bottom: 7em;
-  background-image: url(../img/event-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; 
-  color: #fff;
+/* home upcoming facebook event */
+.facebook-event-home {
+  background-color: #fff;
+  margin-top: 6em;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-.event .event-image {
-  width: 100%;
-  margin: -1px 0 0 0; /*  fix for mysterious margin on the event image, oh css you so crazy. */
+ a.home-fb-event-link {
+  margin-top: 1em;
+  position: static;
+  display: inline-block;
+ }
+.facebook-event-home section > h1 {
+    padding: 0.6em 1.5em;
+    position: absolute;
+    top: -2.3em;
+    left: 0px;
 }
-.event h1 {
-  position: absolute;
-  top: -2.3em;
-}
-.event h2 {
-  font-weight: 900;
-  font-size: 3.6em;
-  margin-bottom: .4em;
-}
-.event h3 {
-  font-family: "badaboom_bbregular",sans-serif;
-  font-size: 5em;
-  margin-top: -0.5em;
-  text-shadow: .1em .1em 1em #000;
-  letter-spacing: -2px;
-}
-.event p.intro {
-  font-size: 1.6em;
-  font-style: italic;
-  font-weight: 400;
-  margin-bottom: .8em;
-}
-.event p {
-  font-size: 1.2em;
-}
-.event-textcontainer {
-  position: relative;
-}
-.event-textcontainer a.to-event {
-  background-color: #EE1D25;
-  font-family: "Source Sans Pro",sans-serif;
-  font-weight: 900;
-  font-size: 2.6em;
-  color: #FFF;
-  padding: .13em .4em .22em;
-  position: absolute;
-  right: .4em;
-
-    bottom: -1.32em;
-  line-height: 1em;
+.facebook-event .cutoffbox-text {
+  padding: 2em 1em 2em 2em;
 }
 
 
@@ -624,6 +573,10 @@ html.graybg {
   margin-top: 4em;
 }
 
+.product-menu {
+  margin-bottom: 2em;
+}
+
 section.product-menu h2 {
   color: hsl(0, 0%, 100%);
   font-size: 1.3em;
@@ -632,12 +585,12 @@ section.product-menu h2 {
   padding: 0.4em;
   font-weight: bold;
   margin: 0;
-  margin-right: 14%;
 }
 .product-menu .cart {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 2em;
+    display: inline-block;
+    position: absolute;
+    margin-bottom: 2em;
+    right: 4em;
 }
 .product-menu .cart-img {
   width: 4em;
@@ -657,22 +610,22 @@ section.product-menu h2 {
   font-size: 0.9em;
 }
 section.product-menu nav {
-  padding-left: 33%;
+  padding-left: 2em;
   background-color: hsl(0, 0%, 92%);
   padding-top: 4em;
-  padding-bottom: 4em;
-  margin-right: 14%;
+  padding-bottom: 1em;
 }
 section.product-menu nav ul {
   display: block;
   width: 100%;
-  padding: 0;
+  padding: 0px 7em 0 0;
+  margin-bottom: 1em;
 }
 section.product-menu nav ul li {
-  display: block;
-  border-bottom: 1px solid hsl(0, 0%, 0%);
+  display: inline-block;
   margin-right: 2em;
   margin-bottom: 1em;
+  width: 4.7em;
 }
 section.product-menu nav ul li a {
   font-family: "Source Sans Pro",sans-serif;
@@ -688,10 +641,11 @@ section.product-menu nav ul li a span {
   float: right;
 }
 section.product-menu .ideal {
-  width: 45%;
+  width: 4em;
 }
 section.product-menu .paypal {
-  width: 55%;
+  width: 6em;
+  margin: 0 1em 1em 0;
 }
 
 section.products-overview h1 {
@@ -707,7 +661,7 @@ section.products-overview hr {
   border-color: hsl(0, 0%, 7%);
 }
 section.products-overview .product {
-  width: 28.9%;
+  width: 46.7%;
   margin-right: 6.6%;
   margin-bottom: 3em;
   float: left;
@@ -720,7 +674,7 @@ section.products-overview .product p.price {
   margin-bottom: 1em;
   font-weight: bold;
 }
-section.products-overview .product:nth-child(3n+2) {
+section.products-overview .product:nth-child(2n+2) {
   margin-right: 0;
 }
 
@@ -743,7 +697,6 @@ section.products-overview .product a.nav-link span {
 }
 .products-overview .paging {
   font-size: 1.3em;
-  position: absolute;
   bottom: 0;
 }
 .products-overview .paging a {
@@ -780,11 +733,11 @@ section.products-overview .product a.nav-link span {
 }
 
 .product-zoom .product-title {
-    background-color: #fff;
-    color: #000;
-    padding: 0;
-    font-size: 2.3em;
-    font-weight: bold;
+  background-color: #fff;
+  color: #000;
+  padding: 0;
+  font-size: 2.3em;
+  font-weight: bold;
 }
 .product-zoom .variant {
   margin: 0 0 1em 0;
@@ -810,7 +763,7 @@ section.products-overview .product a.nav-link span {
   color: #60bf88;
 }
 
-
+/* description */
 .product-zoom .description-box {
   max-height: 10.2em;
   position: relative;
@@ -832,6 +785,7 @@ section.products-overview .product a.nav-link span {
   width: 100%;
 }
 
+/* add to cart */
 .product-zoom .add-to-cart {
   margin-top: 2.5em;
 }
@@ -881,42 +835,48 @@ section.products-overview .product a.nav-link span {
 
 }
 
-/* triangle masks for inside gray blocks */
-.regular-page .triangle-mask-left:before {
-  border-color: #dbdbdb transparent transparent #dbdbdb;
-}
-.regular-page .triangle-mask-right:before {
-  border-color: transparent #dbdbdb transparent;
-}
-.regular-page .triangle-mask-left:before img,
-.regular-page .triangle-mask-right:before img {
-  margin: 0;
-  padding: 0;
-}
-
 /* inside of block with cutoff photo */
+.regular-page p,
+.regular-page li {
+  color: #000;
+}
 .regular-page .row {
   margin: 0;
   position: relative;
 }
-.regular-page .col-sm-5 {
+.regular-page .col-sm-5,
+.regular-page .col-sm-6,
+.regular-page .col-sm-7 {
   margin: 0;
+  padding: 0 2em;
 }
-.regular-page .col-sm-5:last-child {
+.regular-page .col-sm-5:last-child,
+.regular-page .col-sm-6:last-child,
+.regular-page .col-sm-7:last-child {
   float: right;
   text-align: right;
 }
-.regular-page .col-sm-7.cutoff-img {
+.col-sm-6.cutoffbox-img,
+.col-sm-7.cutoffbox-img {
   padding: 0;
-  position: absolute;
   overflow: hidden; /* hides the overflowing triangle that cutsoff the photo */
-  height: 100%;
-  left: 0;
 }
-.regular-page .col-sm-5 + .col-sm-7.cutoff-img {  
+.col-sm-5 + .col-sm-7.cutoffbox-img,
+.col-sm-6 + .col-sm-6.cutoffbox-img {  
   left: unset;
   right: 0;
 }
+.cutoffbox-text {
+  display: block;
+  padding-bottom: 2em;
+}
+
+.cutoffbox-img {
+  display: block;
+  width: 100%;
+  height: 15em;
+}
+
 
 /* contact page specific */
 .regular-page .row p {
@@ -925,7 +885,7 @@ section.products-overview .product a.nav-link span {
 .regular-page .row p:last-child {
   margin-bottom: 2em;
 }
-/* add images to the cutoff boxes */
+/* add placeholder bgimages to the cutoffbox boxes */
 .regular-page section.maps-placeholder {
   background: transparent none no-repeat scroll center center / cover;
   background-image: url("../img/maps-placeholder.jpg");
@@ -942,16 +902,45 @@ section.products-overview .product a.nav-link span {
   width: 95%;
 }
 
-
-
-
-
+.regular-page a.nav-link {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(358, 86%, 52%);
+  padding: 0.8em 1.8em;
+  box-shadow: 5px 4px 0px;
+  width: auto;
+  font-size: 0.9em;
+  display: inline-block;
+  margin: 2em 0;
+  right: unset;
+  position: static;
+  bottom: unset;
+}
+.comicbookstoreday {
+  background: transparent none no-repeat scroll center center / cover;
+  background-image: url("../img/comicbookstoreday.jpg");
+}
 
 
 @media (min-width: 500px) {
   /* tweaking size of sideshow */
   body.bg-slideshow {
     background-size: 165% auto;
+  }
+}
+@media (min-width: 600px) {
+  /* product overview */
+  section.products-overview .product {
+    width: 28.9%;
+    margin-right: 6.6%;
+    margin-bottom: 3em;
+    float: left;
+    margin-top: 2em;
+  }
+  section.products-overview .product:nth-child(2n+2) {
+    margin-right: 6.6%;
+  }
+  section.products-overview .product:nth-child(3n+2) {
+    margin-right: 0;
   }
 }
 @media (min-width: 648px) { 
@@ -1023,6 +1012,71 @@ section.products-overview .product a.nav-link span {
   .ask-henk {
     margin: 10em 8em 4em;
   }
+
+
+  /* cutoff box */
+  .col-sm-7.triangle-mask-left {
+    width: 58.3333%;
+  }
+  .col-sm-7.cutoffbox-img {
+    display: block;
+  }
+  .col-sm-6.cutoffbox-img,
+  .col-sm-7.cutoffbox-img {
+    position: absolute;
+    height: 100%;
+  }
+
+  .col-sm-7.cutoffbox-img {
+    display: block;
+    width: 58.3333%;
+    height: 100%;
+  }
+  .col-sm-6.cutoffbox-img {
+    display: block;
+    width: 50%;
+    height: 100%;
+  }
+
+  /* cuts off images diagonally (put overflow hidden on parent element to fix part of the triangle sticking out)  */
+  .hide-overflow {
+    overflow: hidden;
+  }
+  .triangle-mask-left:before, 
+  .triangle-mask-right:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    z-index: 1000;
+    border-style: solid;
+    bottom: 0;
+  }
+  .triangle-mask-left:before {
+    border-width: 22em 4em 0 0;
+    border-width: 30em 5em 0 0;
+    border-color: #FFF transparent transparent #FFF;
+    left: 0;
+  }
+  .triangle-mask-right:before {
+    border-width: 0 4em 22em 0;
+    border-width: 0 5em 30em 0;
+    border-color: transparent #FFF transparent;
+    right: 0;
+  }
+
+  /* triangle masks for inside gray blocks */
+  .regular-page .triangle-mask-left:before {
+    border-color: #dbdbdb transparent transparent #dbdbdb;
+  }
+  .regular-page .triangle-mask-right:before {
+    border-color: transparent #dbdbdb transparent;
+  }
+  .regular-page .triangle-mask-left:before img,
+  .regular-page .triangle-mask-right:before img {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* bootstrap: medium devices */
@@ -1074,6 +1128,33 @@ section.products-overview .product a.nav-link span {
     right: 0em;
     bottom: 0em;
   }
+
+  /* products page */
+  section.product-menu h2 {
+    margin-right: 14%;
+  }
+  section.product-menu nav {
+    padding-left: 2em;
+    margin-right: 14%;
+    padding-bottom: 4em;
+  }
+  .product-menu .cart {
+    position: relative;
+    margin-bottom: 2em;
+    margin-left: 2.2em;
+    right: unset;
+  }
+  section.product-menu nav ul {
+    width: 100%;
+    padding-right: 0;
+  }
+  section.product-menu nav ul li {
+    display: block;
+    border-bottom: 1px solid hsl(0, 0%, 0%);
+    margin-right: 2em;
+    margin-bottom: 1em;
+    width: auto;
+  }
 }
 
 
@@ -1108,6 +1189,13 @@ section.products-overview .product a.nav-link span {
     margin-right: 0;
   }
 
+  /* product page */
+  section.product-menu nav {
+    padding-left: 33%;
+  }
+  .product-menu .cart {
+    margin-left: 0;
+  }
 }
 
 
